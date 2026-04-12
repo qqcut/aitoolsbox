@@ -6,14 +6,14 @@
   <title>AI Tools Box - Best AI Tools Directory 2024</title>
   <meta name="description" content="Discover the best AI tools for writing, image generation, coding, video, and more. Curated directory of 100+ AI tools with reviews and ratings." />
   <meta name="keywords" content="AI tools, artificial intelligence tools, AI writing tools, AI image generator, AI coding assistant, best AI tools 2024" />
-  <link rel="canonical" href="https://aitoolsbox.com" />
+  <link rel="canonical" href="https://aitoolsbox.shop" />
   
   <!-- Open Graph -->
   <meta property="og:title" content="AI Tools Box - Best AI Tools Directory 2024" />
   <meta property="og:description" content="Discover the best AI tools for writing, image generation, coding, video, and more." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://aitoolsbox.com" />
-  <meta property="og:image" content="https://aitoolsbox.com/og-image.png" />
+  <meta property="og:url" content="https://aitoolsbox.shop" />
+  <meta property="og:image" content="https://aitoolsbox.shop/og-image.png" />
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -33,11 +33,11 @@
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "AI Tools Box",
-    "url": "https://aitoolsbox.com",
+    "url": "https://aitoolsbox.shop",
     "description": "Directory of the best AI tools for writing, image generation, coding, and more.",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://aitoolsbox.com/search?q={search_term_string}",
+      "target": "https://aitoolsbox.shop/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   }
@@ -265,12 +265,15 @@
     }
     
     .tool-card {
+      display: block;
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 16px;
       padding: 24px;
       transition: all 0.3s;
       cursor: pointer;
+      text-decoration: none;
+      color: inherit;
     }
     
     .tool-card:hover {
@@ -579,65 +582,65 @@
   </footer>
   
   <script>
-    // AI Tools Data
+    // AI Tools Data with URLs
     const tools = [
-      { name: "ChatGPT", category: "chat", icon: "💬", desc: "Advanced AI chatbot by OpenAI for conversations, writing, coding, and more.", tags: ["Free", "Popular"], rating: 4.9, featured: true },
-      { name: "Claude", category: "chat", icon: "🤖", desc: "Anthropic's AI assistant known for thoughtful, nuanced responses and long context.", tags: ["Free", "New"], rating: 4.8 },
-      { name: "Midjourney", category: "image", icon: "🎨", desc: "AI image generator creating stunning artwork from text prompts.", tags: ["Paid", "Popular"], rating: 4.9, featured: true },
-      { name: "DALL-E 3", category: "image", icon: "🖼️", desc: "OpenAI's image generation model with photorealistic outputs.", tags: ["Paid"], rating: 4.7 },
-      { name: "Stable Diffusion", category: "image", icon: "✨", desc: "Open-source image generation model, run locally or via services.", tags: ["Free", "Open Source"], rating: 4.6 },
-      { name: "GitHub Copilot", category: "coding", icon: "💻", desc: "AI pair programmer that suggests code in real-time.", tags: ["Paid", "Popular"], rating: 4.8, featured: true },
-      { name: "Cursor", category: "coding", icon: "⌨️", desc: "AI-first code editor with deep codebase understanding.", tags: ["Freemium"], rating: 4.7 },
-      { name: "Jasper", category: "writing", icon: "✍️", desc: "AI writing assistant for marketing copy, blogs, and social media.", tags: ["Paid"], rating: 4.5 },
-      { name: "Copy.ai", category: "writing", icon: "📝", desc: "Generate marketing copy, emails, and content in seconds.", tags: ["Freemium"], rating: 4.4 },
-      { name: "Notion AI", category: "productivity", icon: "📓", desc: "AI-powered writing and summarization inside Notion.", tags: ["Paid"], rating: 4.6 },
-      { name: "Runway ML", category: "video", icon: "🎬", desc: "AI video editing and generation tools for creators.", tags: ["Paid"], rating: 4.7 },
-      { name: "Pika Labs", category: "video", icon: "🎥", desc: "Text-to-video AI for creating short clips from prompts.", tags: ["Free"], rating: 4.5 },
-      { name: "ElevenLabs", category: "audio", icon: "🎵", desc: "AI voice synthesis with natural-sounding speech.", tags: ["Freemium"], rating: 4.8, featured: true },
-      { name: "Murf AI", category: "audio", icon: "🎙️", desc: "AI voiceover generator for videos and presentations.", tags: ["Paid"], rating: 4.4 },
-      { name: "Perplexity AI", category: "chat", icon: "🔍", desc: "AI-powered search engine with cited sources.", tags: ["Free"], rating: 4.7 },
-      { name: "Anthropic Claude", category: "chat", icon: "🧠", desc: "Safe, helpful AI assistant with 200K context window.", tags: ["Freemium"], rating: 4.8 },
-      { name: "Leonardo AI", category: "image", icon: "🎭", desc: "AI image generation with fine-tuned models for game assets.", tags: ["Freemium"], rating: 4.6 },
-      { name: "Ideogram", category: "image", icon: "🌈", desc: "AI image generator excelling at text within images.", tags: ["Free"], rating: 4.5 },
-      { name: "Tabnine", category: "coding", icon: "⚡", desc: "AI code completion supporting all major languages.", tags: ["Freemium"], rating: 4.4 },
-      { name: "Replit AI", category: "coding", icon: "🌐", desc: "AI coding assistant built into Replit IDE.", tags: ["Free"], rating: 4.3 },
-      { name: "Writer.com", category: "writing", icon: "📄", desc: "Enterprise AI writing platform for teams.", tags: ["Paid"], rating: 4.5 },
-      { name: "Rytr", category: "writing", icon: "✒️", desc: "Affordable AI writing assistant for various content.", tags: ["Freemium"], rating: 4.3 },
-      { name: "Synthesia", category: "video", icon: "👤", desc: "AI video generation with virtual avatars.", tags: ["Paid"], rating: 4.6 },
-      { name: "Descript", category: "video", icon: "🎞️", desc: "AI-powered video and podcast editing by editing text.", tags: ["Freemium"], rating: 4.7 },
-      { name: "Suno AI", category: "audio", icon: "🎶", desc: "AI music generation from text prompts.", tags: ["Free"], rating: 4.6, featured: true },
-      { name: "Whisper", category: "audio", icon: "👂", desc: "OpenAI's speech-to-text model, highly accurate.", tags: ["Free"], rating: 4.8 },
-      { name: "Gamma", category: "productivity", icon: "📊", desc: "AI-powered presentations and documents.", tags: ["Freemium"], rating: 4.5 },
-      { name: "Otter.ai", category: "productivity", icon: "📝", desc: "AI meeting transcription and notes.", tags: ["Freemium"], rating: 4.6 },
-      { name: "Grammarly", category: "writing", icon: "✅", desc: "AI writing assistant for grammar and style.", tags: ["Freemium"], rating: 4.7 },
-      { name: "Quillbot", category: "writing", icon: "🔄", desc: "AI paraphrasing and rewriting tool.", tags: ["Freemium"], rating: 4.4 },
-      { name: "Canva AI", category: "image", icon: "🎨", desc: "AI features inside Canva for design and images.", tags: ["Freemium"], rating: 4.6 },
-      { name: "Remove.bg", category: "image", icon: "✂️", desc: "AI background removal for images.", tags: ["Free"], rating: 4.5 },
-      { name: "PhotoRoom", category: "image", icon: "📸", desc: "AI photo editing and background removal.", tags: ["Freemium"], rating: 4.4 },
-      { name: "Codeium", category: "coding", icon: "🚀", desc: "Free AI code completion for multiple IDEs.", tags: ["Free"], rating: 4.5 },
-      { name: "Amazon CodeWhisperer", category: "coding", icon: "📦", desc: "AWS AI coding assistant for developers.", tags: ["Free"], rating: 4.3 },
-      { name: "Hugging Face", category: "coding", icon: "🤗", desc: "Platform for ML models and AI tools.", tags: ["Free"], rating: 4.8 },
-      { name: "Replicate", category: "coding", icon: "🔄", desc: "Run open-source AI models via API.", tags: ["Paid"], rating: 4.5 },
-      { name: "Loom AI", category: "productivity", icon: "🎥", desc: "AI-powered video messaging for teams.", tags: ["Freemium"], rating: 4.4 },
-      { name: "Fireflies.ai", category: "productivity", icon: "🔥", desc: "AI meeting notes and transcription.", tags: ["Freemium"], rating: 4.5 },
-      { name: "Motion", category: "productivity", icon: "📅", desc: "AI calendar and task scheduling.", tags: ["Paid"], rating: 4.3 },
-      { name: "Reclaim.ai", category: "productivity", icon: "⏰", desc: "AI scheduling that protects your time.", tags: ["Freemium"], rating: 4.4 },
-      { name: "SaneBox", category: "productivity", icon: "📧", desc: "AI email filtering and prioritization.", tags: ["Paid"], rating: 4.2 },
-      { name: "Superhuman", category: "productivity", icon: "⚡", desc: "AI-powered email client for speed.", tags: ["Paid"], rating: 4.6 },
-      { name: "Mem", category: "productivity", icon: "🧠", desc: "AI-powered note-taking and knowledge base.", tags: ["Paid"], rating: 4.4 },
-      { name: "Reflect", category: "productivity", icon: "🪞", desc: "AI note-taking with networked thought.", tags: ["Paid"], rating: 4.3 },
-      { name: "Taskade", category: "productivity", icon: "✅", desc: "AI-powered project management and tasks.", tags: ["Freemium"], rating: 4.2 },
-      { name: "Magical", category: "productivity", icon: "✨", desc: "AI text expander and automation.", tags: ["Freemium"], rating: 4.3 },
-      { name: "Texts.com", category: "productivity", icon: "💬", desc: "All-in-one messaging with AI features.", tags: ["Paid"], rating: 4.1 },
-      { name: "Arc Browser", category: "productivity", icon: "🌐", desc: "AI-powered browser with smart features.", tags: ["Free"], rating: 4.7 },
-      { name: "Raycast", category: "productivity", icon: "🚀", desc: "Mac launcher with AI extensions.", tags: ["Free"], rating: 4.6 },
+      { name: "ChatGPT", url: "https://chat.openai.com", category: "chat", icon: "💬", desc: "Advanced AI chatbot by OpenAI for conversations, writing, coding, and more.", tags: ["Free", "Popular"], rating: 4.9, featured: true },
+      { name: "Claude", url: "https://claude.ai", category: "chat", icon: "🤖", desc: "Anthropic's AI assistant known for thoughtful, nuanced responses and long context.", tags: ["Free", "New"], rating: 4.8 },
+      { name: "Midjourney", url: "https://midjourney.com", category: "image", icon: "🎨", desc: "AI image generator creating stunning artwork from text prompts.", tags: ["Paid", "Popular"], rating: 4.9, featured: true },
+      { name: "DALL-E 3", url: "https://openai.com/dall-e-3", category: "image", icon: "🖼️", desc: "OpenAI's image generation model with photorealistic outputs.", tags: ["Paid"], rating: 4.7 },
+      { name: "Stable Diffusion", url: "https://stability.ai", category: "image", icon: "✨", desc: "Open-source image generation model, run locally or via services.", tags: ["Free", "Open Source"], rating: 4.6 },
+      { name: "GitHub Copilot", url: "https://github.com/features/copilot", category: "coding", icon: "💻", desc: "AI pair programmer that suggests code in real-time.", tags: ["Paid", "Popular"], rating: 4.8, featured: true },
+      { name: "Cursor", url: "https://cursor.sh", category: "coding", icon: "⌨️", desc: "AI-first code editor with deep codebase understanding.", tags: ["Freemium"], rating: 4.7 },
+      { name: "Jasper", url: "https://jasper.ai", category: "writing", icon: "✍️", desc: "AI writing assistant for marketing copy, blogs, and social media.", tags: ["Paid"], rating: 4.5 },
+      { name: "Copy.ai", url: "https://copy.ai", category: "writing", icon: "📝", desc: "Generate marketing copy, emails, and content in seconds.", tags: ["Freemium"], rating: 4.4 },
+      { name: "Notion AI", url: "https://notion.so/product/ai", category: "productivity", icon: "📓", desc: "AI-powered writing and summarization inside Notion.", tags: ["Paid"], rating: 4.6 },
+      { name: "Runway ML", url: "https://runwayml.com", category: "video", icon: "🎬", desc: "AI video editing and generation tools for creators.", tags: ["Paid"], rating: 4.7 },
+      { name: "Pika Labs", url: "https://pika.art", category: "video", icon: "🎥", desc: "Text-to-video AI for creating short clips from prompts.", tags: ["Free"], rating: 4.5 },
+      { name: "ElevenLabs", url: "https://elevenlabs.io", category: "audio", icon: "🎵", desc: "AI voice synthesis with natural-sounding speech.", tags: ["Freemium"], rating: 4.8, featured: true },
+      { name: "Murf AI", url: "https://murf.ai", category: "audio", icon: "🎙️", desc: "AI voiceover generator for videos and presentations.", tags: ["Paid"], rating: 4.4 },
+      { name: "Perplexity AI", url: "https://perplexity.ai", category: "chat", icon: "🔍", desc: "AI-powered search engine with cited sources.", tags: ["Free"], rating: 4.7 },
+      { name: "Anthropic Claude", url: "https://anthropic.com", category: "chat", icon: "🧠", desc: "Safe, helpful AI assistant with 200K context window.", tags: ["Freemium"], rating: 4.8 },
+      { name: "Leonardo AI", url: "https://leonardo.ai", category: "image", icon: "🎭", desc: "AI image generation with fine-tuned models for game assets.", tags: ["Freemium"], rating: 4.6 },
+      { name: "Ideogram", url: "https://ideogram.ai", category: "image", icon: "🌈", desc: "AI image generator excelling at text within images.", tags: ["Free"], rating: 4.5 },
+      { name: "Tabnine", url: "https://tabnine.com", category: "coding", icon: "⚡", desc: "AI code completion supporting all major languages.", tags: ["Freemium"], rating: 4.4 },
+      { name: "Replit AI", url: "https://replit.com/ai", category: "coding", icon: "🌐", desc: "AI coding assistant built into Replit IDE.", tags: ["Free"], rating: 4.3 },
+      { name: "Writer.com", url: "https://writer.com", category: "writing", icon: "📄", desc: "Enterprise AI writing platform for teams.", tags: ["Paid"], rating: 4.5 },
+      { name: "Rytr", url: "https://rytr.me", category: "writing", icon: "✒️", desc: "Affordable AI writing assistant for various content.", tags: ["Freemium"], rating: 4.3 },
+      { name: "Synthesia", url: "https://synthesia.io", category: "video", icon: "👤", desc: "AI video generation with virtual avatars.", tags: ["Paid"], rating: 4.6 },
+      { name: "Descript", url: "https://descript.com", category: "video", icon: "🎞️", desc: "AI-powered video and podcast editing by editing text.", tags: ["Freemium"], rating: 4.7 },
+      { name: "Suno AI", url: "https://suno.ai", category: "audio", icon: "🎶", desc: "AI music generation from text prompts.", tags: ["Free"], rating: 4.6, featured: true },
+      { name: "Whisper", url: "https://openai.com/research/whisper", category: "audio", icon: "👂", desc: "OpenAI's speech-to-text model, highly accurate.", tags: ["Free"], rating: 4.8 },
+      { name: "Gamma", url: "https://gamma.app", category: "productivity", icon: "📊", desc: "AI-powered presentations and documents.", tags: ["Freemium"], rating: 4.5 },
+      { name: "Otter.ai", url: "https://otter.ai", category: "productivity", icon: "📝", desc: "AI meeting transcription and notes.", tags: ["Freemium"], rating: 4.6 },
+      { name: "Grammarly", url: "https://grammarly.com", category: "writing", icon: "✅", desc: "AI writing assistant for grammar and style.", tags: ["Freemium"], rating: 4.7 },
+      { name: "Quillbot", url: "https://quillbot.com", category: "writing", icon: "🔄", desc: "AI paraphrasing and rewriting tool.", tags: ["Freemium"], rating: 4.4 },
+      { name: "Canva AI", url: "https://canva.com/ai-image-generator", category: "image", icon: "🎨", desc: "AI features inside Canva for design and images.", tags: ["Freemium"], rating: 4.6 },
+      { name: "Remove.bg", url: "https://remove.bg", category: "image", icon: "✂️", desc: "AI background removal for images.", tags: ["Free"], rating: 4.5 },
+      { name: "PhotoRoom", url: "https://photoroom.com", category: "image", icon: "📸", desc: "AI photo editing and background removal.", tags: ["Freemium"], rating: 4.4 },
+      { name: "Codeium", url: "https://codeium.com", category: "coding", icon: "🚀", desc: "Free AI code completion for multiple IDEs.", tags: ["Free"], rating: 4.5 },
+      { name: "Amazon CodeWhisperer", url: "https://aws.amazon.com/codewhisperer", category: "coding", icon: "📦", desc: "AWS AI coding assistant for developers.", tags: ["Free"], rating: 4.3 },
+      { name: "Hugging Face", url: "https://huggingface.co", category: "coding", icon: "🤗", desc: "Platform for ML models and AI tools.", tags: ["Free"], rating: 4.8 },
+      { name: "Replicate", url: "https://replicate.com", category: "coding", icon: "🔄", desc: "Run open-source AI models via API.", tags: ["Paid"], rating: 4.5 },
+      { name: "Loom AI", url: "https://loom.com/ai", category: "productivity", icon: "🎥", desc: "AI-powered video messaging for teams.", tags: ["Freemium"], rating: 4.4 },
+      { name: "Fireflies.ai", url: "https://fireflies.ai", category: "productivity", icon: "🔥", desc: "AI meeting notes and transcription.", tags: ["Freemium"], rating: 4.5 },
+      { name: "Motion", url: "https://usemotion.com", category: "productivity", icon: "📅", desc: "AI calendar and task scheduling.", tags: ["Paid"], rating: 4.3 },
+      { name: "Reclaim.ai", url: "https://reclaim.ai", category: "productivity", icon: "⏰", desc: "AI scheduling that protects your time.", tags: ["Freemium"], rating: 4.4 },
+      { name: "SaneBox", url: "https://sanebox.com", category: "productivity", icon: "📧", desc: "AI email filtering and prioritization.", tags: ["Paid"], rating: 4.2 },
+      { name: "Superhuman", url: "https://superhuman.com", category: "productivity", icon: "⚡", desc: "AI-powered email client for speed.", tags: ["Paid"], rating: 4.6 },
+      { name: "Mem", url: "https://mem.ai", category: "productivity", icon: "🧠", desc: "AI-powered note-taking and knowledge base.", tags: ["Paid"], rating: 4.4 },
+      { name: "Reflect", url: "https://reflect.app", category: "productivity", icon: "🪞", desc: "AI note-taking with networked thought.", tags: ["Paid"], rating: 4.3 },
+      { name: "Taskade", url: "https://taskade.com", category: "productivity", icon: "✅", desc: "AI-powered project management and tasks.", tags: ["Freemium"], rating: 4.2 },
+      { name: "Magical", url: "https://getmagical.com", category: "productivity", icon: "✨", desc: "AI text expander and automation.", tags: ["Freemium"], rating: 4.3 },
+      { name: "Texts.com", url: "https://texts.com", category: "productivity", icon: "💬", desc: "All-in-one messaging with AI features.", tags: ["Paid"], rating: 4.1 },
+      { name: "Arc Browser", url: "https://arc.net", category: "productivity", icon: "🌐", desc: "AI-powered browser with smart features.", tags: ["Free"], rating: 4.7 },
+      { name: "Raycast", url: "https://raycast.com", category: "productivity", icon: "🚀", desc: "Mac launcher with AI extensions.", tags: ["Free"], rating: 4.6 },
     ];
     
-    // Render tools
+    // Render tools - now with clickable links!
     function renderTools(filteredTools) {
       const grid = document.getElementById('tools-grid');
       grid.innerHTML = filteredTools.map(tool => `
-        <article class="tool-card" style="position: relative">
+        <a href="${tool.url}" target="_blank" rel="noopener" class="tool-card" style="position: relative">
           ${tool.featured ? '<div class="featured-badge">Featured</div>' : ''}
           <div class="tool-header">
             <div class="tool-icon">${tool.icon}</div>
@@ -658,7 +661,7 @@
               ${tool.rating}
             </div>
           </div>
-        </article>
+        </a>
       `).join('');
     }
     
