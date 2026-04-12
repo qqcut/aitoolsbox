@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Tools Box - Best AI Tools Directory 2024</title>
+  <title>AI Tools Box - Best AI Tools Directory 2026</title>
   <meta name="description" content="Discover the best AI tools for writing, image generation, coding, video, and more. Curated directory of 100+ AI tools with reviews and ratings." />
-  <meta name="keywords" content="AI tools, artificial intelligence tools, AI writing tools, AI image generator, AI coding assistant, best AI tools 2024" />
+  <meta name="keywords" content="AI tools, artificial intelligence tools, AI writing tools, AI image generator, AI coding assistant, best AI tools 2026" />
   <link rel="canonical" href="https://aitoolsbox.shop" />
   
   <!-- Open Graph -->
@@ -90,6 +90,90 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .translate-btn {
+      padding: 8px 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .translate-btn:hover {
+      background: var(--bg-hover);
+      color: var(--text);
+      border-color: var(--accent);
+    }
+
+    .translate-dropdown {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      margin-top: 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 8px;
+      min-width: 170px;
+      max-height: 360px;
+      overflow-y: auto;
+      box-shadow: var(--shadow);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.2s;
+      z-index: 200;
+    }
+
+    .translate-dropdown::-webkit-scrollbar {
+      width: 4px;
+    }
+    .translate-dropdown::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .translate-dropdown::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 4px;
+    }
+
+    .translate-dropdown.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .translate-option {
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      color: var(--text);
+      cursor: pointer;
+      transition: background 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .translate-option:hover {
+      background: var(--bg-hover);
+    }
+
+    .translate-wrapper {
+      position: relative;
     }
     
     .logo {
@@ -465,13 +549,42 @@
   <header>
     <div class="header-inner">
       <a href="/" class="logo">AI Tools Box</a>
-      <nav>
-        <a href="#writing">Writing</a>
-        <a href="#image">Image</a>
-        <a href="#coding">Coding</a>
-        <a href="#video">Video</a>
-        <a href="#audio">Audio</a>
-      </nav>
+      <div class="header-right">
+        <nav>
+          <a href="/categories/writing">Writing</a>
+          <a href="/categories/image">Image</a>
+          <a href="/categories/coding">Coding</a>
+          <a href="/categories/video">Video</a>
+          <a href="/categories/audio">Audio</a>
+        </nav>
+        <div class="translate-wrapper">
+          <button class="translate-btn" id="translate-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M2 12h20"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            <span id="current-lang">EN</span>
+          </button>
+          <div class="translate-dropdown" id="translate-dropdown">
+            <div class="translate-option" data-lang="en">🇺🇸 English</div>
+            <div class="translate-option" data-lang="zh">🇨🇳 简体中文</div>
+            <div class="translate-option" data-lang="zh-tw">🇹🇼 繁體中文</div>
+            <div class="translate-option" data-lang="ja">🇯🇵 日本語</div>
+            <div class="translate-option" data-lang="ko">🇰🇷 한국어</div>
+            <div class="translate-option" data-lang="es">🇪🇸 Español</div>
+            <div class="translate-option" data-lang="fr">🇫🇷 Français</div>
+            <div class="translate-option" data-lang="de">🇩🇪 Deutsch</div>
+            <div class="translate-option" data-lang="pt">🇧🇷 Português</div>
+            <div class="translate-option" data-lang="ru">🇷🇺 Русский</div>
+            <div class="translate-option" data-lang="ar">🇸🇦 العربية</div>
+            <div class="translate-option" data-lang="hi">🇮🇳 हिन्दी</div>
+            <div class="translate-option" data-lang="it">🇮🇹 Italiano</div>
+            <div class="translate-option" data-lang="nl">🇳🇱 Nederlands</div>
+            <div class="translate-option" data-lang="tr">🇹🇷 Türkçe</div>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
   
@@ -479,7 +592,7 @@
   <section class="hero">
     <div class="hero-badge">
       <span>✨</span>
-      <span>Updated for 2024</span>
+      <span>Updated for 2026</span>
     </div>
     <h1>Discover the Best AI Tools</h1>
     <p>Your curated directory of 100+ AI-powered tools for writing, design, coding, video, and more. Find the perfect AI assistant for your workflow.</p>
@@ -577,7 +690,7 @@
       <a href="/contact">Contact</a>
     </div>
     <div class="footer-copy">
-      © 2024 AI Tools Box. All rights reserved.
+      © 2026 AI Tools Box. All rights reserved.
     </div>
   </footer>
   
@@ -665,6 +778,243 @@
       `).join('');
     }
     
+    // Translations
+    const translations = {
+      en: {
+        title: "Discover the Best AI Tools",
+        subtitle: "Your curated directory of 100+ AI-powered tools for writing, design, coding, video, and more. Find the perfect AI assistant for your workflow.",
+        badge: "Updated for 2026",
+        searchPlaceholder: "Search AI tools...",
+        allTools: "All Tools",
+        stats: { tools: "AI Tools", categories: "Categories", users: "Monthly Users" },
+        cta: { title: "Submit Your AI Tool", desc: "Have an AI tool you want to feature? Get listed in our directory.", btn: "Submit Tool" },
+        footer: { about: "About", privacy: "Privacy Policy", terms: "Terms", contact: "Contact", copy: "© 2026 AI Tools Box. All rights reserved." },
+        categories: { writing: "✍️ Writing", image: "🎨 Image", coding: "💻 Coding", video: "🎬 Video", audio: "🎵 Audio", chat: "💬 Chat", productivity: "⚡ Productivity" }
+      },
+      zh: {
+        title: "发现最佳 AI 工具",
+        subtitle: "精心策划的 100+ AI 工具目录，涵盖写作、设计、编程、视频等。找到适合你工作流程的完美 AI 助手。",
+        badge: "2026 年更新",
+        searchPlaceholder: "搜索 AI 工具...",
+        allTools: "全部工具",
+        stats: { tools: "AI 工具", categories: "分类", users: "月活用户" },
+        cta: { title: "提交你的 AI 工具", desc: "有想要展示的 AI 工具？加入我们的目录。", btn: "提交工具" },
+        footer: { about: "关于", privacy: "隐私政策", terms: "条款", contact: "联系我们", copy: "© 2026 AI Tools Box. 保留所有权利。" },
+        categories: { writing: "✍️ 写作", image: "🎨 图像", coding: "💻 编程", video: "🎬 视频", audio: "🎵 音频", chat: "💬 聊天", productivity: "⚡ 生产力" }
+      },
+      "zh-tw": {
+        title: "探索最佳 AI 工具",
+        subtitle: "精心策劃的 100+ AI 工具目錄，涵蓋寫作、設計、程式設計、影片等。找到適合你工作流程的完美 AI 助手。",
+        badge: "2026 年更新",
+        searchPlaceholder: "搜尋 AI 工具...",
+        allTools: "全部工具",
+        stats: { tools: "AI 工具", categories: "分類", users: "月活用戶" },
+        cta: { title: "提交你的 AI 工具", desc: "有想要展示的 AI 工具？加入我們的目錄。", btn: "提交工具" },
+        footer: { about: "關於", privacy: "隱私政策", terms: "條款", contact: "聯絡我們", copy: "© 2026 AI Tools Box. 保留所有權利。" },
+        categories: { writing: "✍️ 寫作", image: "🎨 圖像", coding: "💻 程式設計", video: "🎬 影片", audio: "🎵 音訊", chat: "💬 聊天", productivity: "⚡ 生產力" }
+      },
+      ja: {
+        title: "最高のAIツールを発見",
+        subtitle: "ライティング、デザイン、コーディング、ビデオなど、100以上のAIツールを厳選。あなたのワークフローに最適なAIアシスタントを見つけましょう。",
+        badge: "2026年更新",
+        searchPlaceholder: "AIツールを検索...",
+        allTools: "すべてのツール",
+        stats: { tools: "AIツール", categories: "カテゴリ", users: "月間ユーザー" },
+        cta: { title: "AIツールを投稿", desc: "掲載したいAIツールがありますか？ディレクトリに追加しましょう。", btn: "ツールを投稿" },
+        footer: { about: "について", privacy: "プライバシー", terms: "利用規約", contact: "お問い合わせ", copy: "© 2026 AI Tools Box. All rights reserved." },
+        categories: { writing: "✍️ ライティング", image: "🎨 画像", coding: "💻 コーディング", video: "🎬 ビデオ", audio: "🎵 オーディオ", chat: "💬 チャット", productivity: "⚡ 生産性" }
+      },
+      ko: {
+        title: "최고의 AI 도구 발견",
+        subtitle: "글쓰기, 디자인, 코딩, 비디오 등 100개 이상의 AI 도구를 엄선했습니다. 워크플로우에 완벽한 AI 도우미를 찾아보세요.",
+        badge: "2026년 업데이트",
+        searchPlaceholder: "AI 도구 검색...",
+        allTools: "모든 도구",
+        stats: { tools: "AI 도구", categories: "카테고리", users: "월간 사용자" },
+        cta: { title: "AI 도구 제출", desc: "소개하고 싶은 AI 도구가 있나요? 디렉토리에 등록하세요.", btn: "도구 제출" },
+        footer: { about: "소개", privacy: "개인정보", terms: "이용약관", contact: "문의", copy: "© 2026 AI Tools Box. All rights reserved." },
+        categories: { writing: "✍️ 글쓰기", image: "🎨 이미지", coding: "💻 코딩", video: "🎬 비디오", audio: "🎵 오디오", chat: "💬 채팅", productivity: "⚡ 생산성" }
+      },
+      es: {
+        title: "Descubre las Mejores Herramientas de IA",
+        subtitle: "Directorio curado de 100+ herramientas de IA para escritura, diseño, programación, video y más. Encuentra el asistente de IA perfecto.",
+        badge: "Actualizado 2026",
+        searchPlaceholder: "Buscar herramientas de IA...",
+        allTools: "Todas las Herramientas",
+        stats: { tools: "Herramientas IA", categories: "Categorías", users: "Usuarios Mensuales" },
+        cta: { title: "Envía tu Herramienta de IA", desc: "¿Tienes una herramienta de IA para destacar? Aparece en nuestro directorio.", btn: "Enviar Herramienta" },
+        footer: { about: "Acerca de", privacy: "Privacidad", terms: "Términos", contact: "Contacto", copy: "© 2026 AI Tools Box. Todos los derechos reservados." },
+        categories: { writing: "✍️ Escritura", image: "🎨 Imagen", coding: "💻 Programación", video: "🎬 Video", audio: "🎵 Audio", chat: "💬 Chat", productivity: "⚡ Productividad" }
+      },
+      fr: {
+        title: "Découvrez les Meilleurs Outils IA",
+        subtitle: "Répertoire de 100+ outils IA pour l'écriture, le design, le code, la vidéo et plus. Trouvez l'assistant IA parfait pour votre flux de travail.",
+        badge: "Mis à jour 2026",
+        searchPlaceholder: "Rechercher des outils IA...",
+        allTools: "Tous les Outils",
+        stats: { tools: "Outils IA", categories: "Catégories", users: "Utilisateurs Mensuels" },
+        cta: { title: "Soumettre votre Outil IA", desc: "Vous avez un outil IA à présenter ? Faites-le référencer dans notre annuaire.", btn: "Soumettre" },
+        footer: { about: "À propos", privacy: "Confidentialité", terms: "Conditions", contact: "Contact", copy: "© 2026 AI Tools Box. Tous droits réservés." },
+        categories: { writing: "✍️ Écriture", image: "🎨 Image", coding: "💻 Code", video: "🎬 Vidéo", audio: "🎵 Audio", chat: "💬 Chat", productivity: "⚡ Productivité" }
+      },
+      de: {
+        title: "Entdecke die Besten KI-Tools",
+        subtitle: "Kuratiertes Verzeichnis von 100+ KI-Tools für Schreiben, Design, Coding, Video und mehr. Finde den perfekten KI-Assistenten für deinen Workflow.",
+        badge: "Aktualisiert 2026",
+        searchPlaceholder: "KI-Tools suchen...",
+        allTools: "Alle Tools",
+        stats: { tools: "KI-Tools", categories: "Kategorien", users: "Monatliche Nutzer" },
+        cta: { title: "KI-Tool einreichen", desc: "Hast du ein KI-Tool, das du vorstellen möchtest? Lass es in unserem Verzeichnis listen.", btn: "Tool einreichen" },
+        footer: { about: "Über uns", privacy: "Datenschutz", terms: "AGB", contact: "Kontakt", copy: "© 2026 AI Tools Box. Alle Rechte vorbehalten." },
+        categories: { writing: "✍️ Schreiben", image: "🎨 Bild", coding: "💻 Coding", video: "🎬 Video", audio: "🎵 Audio", chat: "💬 Chat", productivity: "⚡ Produktivität" }
+      },
+      pt: {
+        title: "Descubra as Melhores Ferramentas de IA",
+        subtitle: "Diretório curado de 100+ ferramentas de IA para escrita, design, programação, vídeo e mais. Encontre o assistente de IA perfeito.",
+        badge: "Atualizado 2026",
+        searchPlaceholder: "Pesquisar ferramentas de IA...",
+        allTools: "Todas as Ferramentas",
+        stats: { tools: "Ferramentas IA", categories: "Categorias", users: "Usuários Mensais" },
+        cta: { title: "Envie sua Ferramenta de IA", desc: "Tem uma ferramenta de IA para destacar? Apareça em nosso diretório.", btn: "Enviar Ferramenta" },
+        footer: { about: "Sobre", privacy: "Privacidade", terms: "Termos", contact: "Contato", copy: "© 2026 AI Tools Box. Todos os direitos reservados." },
+        categories: { writing: "✍️ Escrita", image: "🎨 Imagem", coding: "💻 Programação", video: "🎬 Vídeo", audio: "🎵 Áudio", chat: "💬 Chat", productivity: "⚡ Produtividade" }
+      },
+      ru: {
+        title: "Откройте Лучшие ИИ-Инструменты",
+        subtitle: "Каталог из 100+ ИИ-инструментов для написания текстов, дизайна, программирования, видео и многого другого.",
+        badge: "Обновлено 2026",
+        searchPlaceholder: "Поиск ИИ-инструментов...",
+        allTools: "Все инструменты",
+        stats: { tools: "ИИ-инструменты", categories: "Категории", users: "Пользователей в месяц" },
+        cta: { title: "Добавить ИИ-инструмент", desc: "Есть ИИ-инструмент для размещения? Добавьте его в наш каталог.", btn: "Добавить" },
+        footer: { about: "О нас", privacy: "Конфиденциальность", terms: "Условия", contact: "Контакты", copy: "© 2026 AI Tools Box. Все права защищены." },
+        categories: { writing: "✍️ Текст", image: "🎨 Изображения", coding: "💻 Код", video: "🎬 Видео", audio: "🎵 Аудио", chat: "💬 Чат", productivity: "⚡ Продуктивность" }
+      },
+      ar: {
+        title: "اكتشف أفضل أدوات الذكاء الاصطناعي",
+        subtitle: "دليل منتقى يضم أكثر من 100 أداة ذكاء اصطناعي للكتابة والتصميم والبرمجة والفيديو والمزيد.",
+        badge: "محدّث 2026",
+        searchPlaceholder: "ابحث عن أدوات الذكاء الاصطناعي...",
+        allTools: "جميع الأدوات",
+        stats: { tools: "أدوات الذكاء الاصطناعي", categories: "الفئات", users: "المستخدمون الشهريون" },
+        cta: { title: "أضف أداتك", desc: "هل لديك أداة ذكاء اصطناعي تريد عرضها؟ أضفها إلى دليلنا.", btn: "إضافة أداة" },
+        footer: { about: "عن الموقع", privacy: "الخصوصية", terms: "الشروط", contact: "اتصل بنا", copy: "© 2026 AI Tools Box. جميع الحقوق محفوظة." },
+        categories: { writing: "✍️ كتابة", image: "🎨 صور", coding: "💻 برمجة", video: "🎬 فيديو", audio: "🎵 صوت", chat: "💬 دردشة", productivity: "⚡ إنتاجية" }
+      },
+      hi: {
+        title: "सर्वश्रेष्ठ AI टूल्स खोजें",
+        subtitle: "लेखन, डिज़ाइन, कोडिंग, वीडियो और अधिक के लिए 100+ AI टूल्स का क्यूरेटेड डायरेक्टरी।",
+        badge: "2026 के लिए अपडेट",
+        searchPlaceholder: "AI टूल्स खोजें...",
+        allTools: "सभी टूल्स",
+        stats: { tools: "AI टूल्स", categories: "श्रेणियाँ", users: "मासिक उपयोगकर्ता" },
+        cta: { title: "अपना AI टूल सबमिट करें", desc: "क्या आपके पास कोई AI टूल है? हमारी डायरेक्टरी में शामिल हों।", btn: "टूल सबमिट करें" },
+        footer: { about: "हमारे बारे में", privacy: "गोपनीयता", terms: "नियम", contact: "संपर्क", copy: "© 2026 AI Tools Box. सर्वाधिकार सुरक्षित।" },
+        categories: { writing: "✍️ लेखन", image: "🎨 छवि", coding: "💻 कोडिंग", video: "🎬 वीडियो", audio: "🎵 ऑडियो", chat: "💬 चैट", productivity: "⚡ उत्पादकता" }
+      },
+      it: {
+        title: "Scopri i Migliori Strumenti AI",
+        subtitle: "Directory curata di 100+ strumenti AI per scrittura, design, coding, video e altro. Trova l'assistente AI perfetto per il tuo flusso di lavoro.",
+        badge: "Aggiornato 2026",
+        searchPlaceholder: "Cerca strumenti AI...",
+        allTools: "Tutti gli Strumenti",
+        stats: { tools: "Strumenti AI", categories: "Categorie", users: "Utenti Mensili" },
+        cta: { title: "Invia il tuo Strumento AI", desc: "Hai uno strumento AI da presentare? Fallo elencare nella nostra directory.", btn: "Invia Strumento" },
+        footer: { about: "Chi siamo", privacy: "Privacy", terms: "Termini", contact: "Contatti", copy: "© 2026 AI Tools Box. Tutti i diritti riservati." },
+        categories: { writing: "✍️ Scrittura", image: "🎨 Immagine", coding: "💻 Coding", video: "🎬 Video", audio: "🎵 Audio", chat: "💬 Chat", productivity: "⚡ Produttività" }
+      },
+      nl: {
+        title: "Ontdek de Beste AI-Tools",
+        subtitle: "Samengestelde directory van 100+ AI-tools voor schrijven, design, coderen, video en meer. Vind de perfecte AI-assistent voor jouw workflow.",
+        badge: "Bijgewerkt 2026",
+        searchPlaceholder: "Zoek AI-tools...",
+        allTools: "Alle Tools",
+        stats: { tools: "AI-Tools", categories: "Categorieën", users: "Maandelijkse Gebruikers" },
+        cta: { title: "Dien je AI-Tool in", desc: "Heb je een AI-tool om te presenteren? Laat het opnemen in onze directory.", btn: "Tool indienen" },
+        footer: { about: "Over ons", privacy: "Privacy", terms: "Voorwaarden", contact: "Contact", copy: "© 2026 AI Tools Box. Alle rechten voorbehouden." },
+        categories: { writing: "✍️ Schrijven", image: "🎨 Afbeelding", coding: "💻 Coderen", video: "🎬 Video", audio: "🎵 Audio", chat: "💬 Chat", productivity: "⚡ Productiviteit" }
+      },
+      tr: {
+        title: "En İyi Yapay Zeka Araçlarını Keşfet",
+        subtitle: "Yazma, tasarım, kodlama, video ve daha fazlası için 100+ yapay zeka aracının özenle seçilmiş dizini.",
+        badge: "2026 Güncellemesi",
+        searchPlaceholder: "Yapay zeka araçlarını ara...",
+        allTools: "Tüm Araçlar",
+        stats: { tools: "YZ Araçları", categories: "Kategoriler", users: "Aylık Kullanıcı" },
+        cta: { title: "YZ Aracınızı Gönderin", desc: "Öne çıkarmak istediğiniz bir YZ aracı var mı? Dizinimizde yer alın.", btn: "Araç Gönder" },
+        footer: { about: "Hakkında", privacy: "Gizlilik", terms: "Şartlar", contact: "İletişim", copy: "© 2026 AI Tools Box. Tüm hakları saklıdır." },
+        categories: { writing: "✍️ Yazma", image: "🎨 Görsel", coding: "💻 Kodlama", video: "🎬 Video", audio: "🎵 Ses", chat: "💬 Sohbet", productivity: "⚡ Verimlilik" }
+      }
+    };
+
+    let currentLang = 'en';
+
+    function applyTranslation(lang) {
+      const t = translations[lang];
+      if (!t) return;
+      
+      // RTL support for Arabic
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+      
+      document.querySelector('.hero h1').textContent = t.title;
+      document.querySelector('.hero > p').textContent = t.subtitle;
+      document.querySelector('.hero-badge span:last-child').textContent = t.badge;
+      document.getElementById('search').placeholder = t.searchPlaceholder;
+      document.querySelector('.category-tab[data-category="all"]').textContent = t.allTools;
+      
+      document.querySelectorAll('.stat-label')[0].textContent = t.stats.tools;
+      document.querySelectorAll('.stat-label')[1].textContent = t.stats.categories;
+      document.querySelectorAll('.stat-label')[2].textContent = t.stats.users;
+      
+      document.querySelector('.cta-section h2').textContent = t.cta.title;
+      document.querySelector('.cta-section > p').textContent = t.cta.desc;
+      document.querySelector('.cta-btn span:first-child').textContent = t.cta.btn;
+      
+      document.querySelectorAll('.footer-links a')[0].textContent = t.footer.about;
+      document.querySelectorAll('.footer-links a')[1].textContent = t.footer.privacy;
+      document.querySelectorAll('.footer-links a')[2].textContent = t.footer.terms;
+      document.querySelectorAll('.footer-links a')[3].textContent = t.footer.contact;
+      document.querySelector('.footer-copy').textContent = t.footer.copy;
+      
+      document.querySelector('.category-tab[data-category="writing"]').textContent = t.categories.writing;
+      document.querySelector('.category-tab[data-category="image"]').textContent = t.categories.image;
+      document.querySelector('.category-tab[data-category="coding"]').textContent = t.categories.coding;
+      document.querySelector('.category-tab[data-category="video"]').textContent = t.categories.video;
+      document.querySelector('.category-tab[data-category="audio"]').textContent = t.categories.audio;
+      document.querySelector('.category-tab[data-category="chat"]').textContent = t.categories.chat;
+      document.querySelector('.category-tab[data-category="productivity"]').textContent = t.categories.productivity;
+      
+      document.getElementById('current-lang').textContent = lang.toUpperCase();
+      currentLang = lang;
+      localStorage.setItem('aitoolsbox-lang', lang);
+    }
+
+    // Translate dropdown toggle
+    document.getElementById('translate-btn').addEventListener('click', (e) => {
+      e.stopPropagation();
+      document.getElementById('translate-dropdown').classList.toggle('active');
+    });
+
+    // Language selection
+    document.querySelectorAll('.translate-option').forEach(option => {
+      option.addEventListener('click', () => {
+        const lang = option.dataset.lang;
+        applyTranslation(lang);
+        document.getElementById('translate-dropdown').classList.remove('active');
+      });
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', () => {
+      document.getElementById('translate-dropdown').classList.remove('active');
+    });
+
+    // Load saved language
+    const savedLang = localStorage.getItem('aitoolsbox-lang');
+    if (savedLang && translations[savedLang]) {
+      applyTranslation(savedLang);
+    }
+
     // Initial render
     renderTools(tools);
     
