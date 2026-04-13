@@ -1,47 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Tools Box - Best AI Tools Directory 2026</title>
-  <meta name="description" content="Discover the best AI tools for writing, image generation, coding, video, and more. Curated directory of 100+ AI tools with reviews and ratings." />
-  <meta name="keywords" content="AI tools, artificial intelligence tools, AI writing tools, AI image generator, AI coding assistant, best AI tools 2026" />
-  <link rel="canonical" href="https://aitoolsbox.shop" />
-  
-  <!-- Open Graph -->
-  <meta property="og:title" content="AI Tools Box - Best AI Tools Directory 2024" />
-  <meta property="og:description" content="Discover the best AI tools for writing, image generation, coding, video, and more." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://aitoolsbox.shop" />
-  <meta property="og:image" content="https://aitoolsbox.shop/og-image.png" />
-  
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="AI Tools Box - Best AI Tools Directory" />
-  <meta name="twitter:description" content="Discover the best AI tools for writing, image generation, coding, and more." />
-  
-  <!-- Favicon -->
-  <link rel="icon" href="/favicon.ico" />
-  
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  
-  <!-- Schema.org -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "AI Tools Box",
-    "url": "https://aitoolsbox.shop",
-    "description": "Directory of the best AI tools for writing, image generation, coding, and more.",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://aitoolsbox.shop/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
+
   
   <style>
     :root {
@@ -92,90 +49,12 @@
       justify-content: space-between;
     }
 
-    .header-right {
+    .header-left {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 32px;
     }
 
-    .translate-btn {
-      padding: 8px 16px;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--text-muted);
-      cursor: pointer;
-      transition: all 0.2s;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .translate-btn:hover {
-      background: var(--bg-hover);
-      color: var(--text);
-      border-color: var(--accent);
-    }
-
-    .translate-dropdown {
-      position: absolute;
-      top: 100%;
-      right: 0;
-      margin-top: 8px;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 8px;
-      min-width: 170px;
-      max-height: 360px;
-      overflow-y: auto;
-      box-shadow: var(--shadow);
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(-10px);
-      transition: all 0.2s;
-      z-index: 200;
-    }
-
-    .translate-dropdown::-webkit-scrollbar {
-      width: 4px;
-    }
-    .translate-dropdown::-webkit-scrollbar-track {
-      background: transparent;
-    }
-    .translate-dropdown::-webkit-scrollbar-thumb {
-      background: var(--border);
-      border-radius: 4px;
-    }
-
-    .translate-dropdown.active {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
-
-    .translate-option {
-      padding: 10px 16px;
-      border-radius: 8px;
-      font-size: 14px;
-      color: var(--text);
-      cursor: pointer;
-      transition: background 0.2s;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .translate-option:hover {
-      background: var(--bg-hover);
-    }
-
-    .translate-wrapper {
-      position: relative;
-    }
-    
     .logo {
       font-size: 24px;
       font-weight: 800;
@@ -184,7 +63,7 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-    
+
     nav { display: flex; gap: 32px; }
     
     nav a {
@@ -195,6 +74,77 @@
     }
     
     nav a:hover { color: var(--text); }
+
+    /* ── LANG SELECTOR ── */
+    .lang-selector {
+      position: relative;
+      display: inline-block;
+    }
+
+    .lang-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      letter-spacing: 0.5px;
+    }
+
+    .lang-btn:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.2);
+    }
+
+    .lang-btn svg {
+      width: 12px;
+      height: 12px;
+      opacity: 0.6;
+    }
+
+    .lang-dropdown {
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 8px;
+      min-width: 140px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      display: none;
+      z-index: 200;
+    }
+
+    .lang-dropdown.show { display: block; }
+
+    .lang-option {
+      display: block;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .lang-option:hover {
+      background: var(--bg-hover);
+      color: var(--text);
+    }
+
+    .lang-option.active {
+      background: rgba(99, 102, 241, 0.15);
+      color: var(--accent);
+      font-weight: 600;
+    }
     
     /* ── HERO ── */
     .hero {
@@ -349,15 +299,12 @@
     }
     
     .tool-card {
-      display: block;
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 16px;
       padding: 24px;
       transition: all 0.3s;
       cursor: pointer;
-      text-decoration: none;
-      color: inherit;
     }
     
     .tool-card:hover {
@@ -543,74 +490,55 @@
       margin-bottom: 8px;
     }
   </style>
+
+  
+  <meta name="monetag" content="40a0780f1631f33c716bd3ca198b784a">
 </head>
 <body>
   <!-- HEADER -->
   <header>
     <div class="header-inner">
-      <a href="/" class="logo">AI Tools Box</a>
-      <div class="header-right">
+      <div class="header-left">
+        <a href="/" class="logo">AI Tools Box</a>
         <nav>
-          <a href="/categories/writing">Writing</a>
-          <a href="/categories/image">Image</a>
-          <a href="/categories/coding">Coding</a>
-          <a href="/categories/video">Video</a>
-          <a href="/categories/audio">Audio</a>
+          <a href="javascript:void(0)" onclick="document.querySelector('[data-category=writing]').click();window.scrollTo({top:0,behavior:'smooth'})" data-i18n="nav.writing">Writing</a>
+          <a href="javascript:void(0)" onclick="document.querySelector('[data-category=image]').click();window.scrollTo({top:0,behavior:'smooth'})" data-i18n="nav.image">Image</a>
+          <a href="javascript:void(0)" onclick="document.querySelector('[data-category=coding]').click();window.scrollTo({top:0,behavior:'smooth'})" data-i18n="nav.coding">Coding</a>
+          <a href="javascript:void(0)" onclick="document.querySelector('[data-category=video]').click();window.scrollTo({top:0,behavior:'smooth'})" data-i18n="nav.video">Video</a>
+          <a href="javascript:void(0)" onclick="document.querySelector('[data-category=audio]').click();window.scrollTo({top:0,behavior:'smooth'})" data-i18n="nav.audio">Audio</a>
         </nav>
-        <div class="translate-wrapper">
-          <button class="translate-btn" id="translate-btn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M2 12h20"/>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-            </svg>
-            <span id="current-lang">EN</span>
-          </button>
-          <div class="translate-dropdown" id="translate-dropdown">
-            <div class="translate-option" data-lang="en">🇺🇸 English</div>
-            <div class="translate-option" data-lang="zh">🇨🇳 简体中文</div>
-            <div class="translate-option" data-lang="zh-tw">🇹🇼 繁體中文</div>
-            <div class="translate-option" data-lang="ja">🇯🇵 日本語</div>
-            <div class="translate-option" data-lang="ko">🇰🇷 한국어</div>
-            <div class="translate-option" data-lang="es">🇪🇸 Español</div>
-            <div class="translate-option" data-lang="fr">🇫🇷 Français</div>
-            <div class="translate-option" data-lang="de">🇩🇪 Deutsch</div>
-            <div class="translate-option" data-lang="pt">🇧🇷 Português</div>
-            <div class="translate-option" data-lang="ru">🇷🇺 Русский</div>
-            <div class="translate-option" data-lang="ar">🇸🇦 العربية</div>
-            <div class="translate-option" data-lang="hi">🇮🇳 हिन्दी</div>
-            <div class="translate-option" data-lang="it">🇮🇹 Italiano</div>
-            <div class="translate-option" data-lang="nl">🇳🇱 Nederlands</div>
-            <div class="translate-option" data-lang="tr">🇹🇷 Türkçe</div>
-          </div>
+      </div>
+      <div class="lang-selector">
+        <button class="lang-btn" id="langBtn" onclick="toggleLangDropdown()">
+          <span id="currentLang">EN</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="lang-dropdown" id="langDropdown">
+          <div class="lang-option active" onclick="setLanguage('en')">English</div>
+          <div class="lang-option" onclick="setLanguage('zh')">中文</div>
+          <div class="lang-option" onclick="setLanguage('ja')">日本語</div>
+          <div class="lang-option" onclick="setLanguage('ko')">한국어</div>
+          <div class="lang-option" onclick="setLanguage('es')">Español</div>
+          <div class="lang-option" onclick="setLanguage('fr')">Français</div>
+          <div class="lang-option" onclick="setLanguage('de')">Deutsch</div>
+          <div class="lang-option" onclick="setLanguage('ru')">Русский</div>
+          <div class="lang-option" onclick="setLanguage('ar')">العربية</div>
+          <div class="lang-option" onclick="setLanguage('pt')">Português</div>
         </div>
       </div>
     </div>
   </header>
-  
+
   <!-- HERO -->
   <section class="hero">
     <div class="hero-badge">
       <span>✨</span>
-      <span>Updated for 2026</span>
+      <span data-i18n="hero.badge">Updated for 2024</span>
     </div>
-    <h1>Discover the Best AI Tools</h1>
-    <p>Your curated directory of 100+ AI-powered tools for writing, design, coding, video, and more. Find the perfect AI assistant for your workflow.</p>
-    
-    <div class="hero-stats">
-      <div class="stat">
-        <div class="stat-value">100+</div>
-        <div class="stat-label">AI Tools</div>
-      </div>
-      <div class="stat">
-        <div class="stat-value">12</div>
-        <div class="stat-label">Categories</div>
-      </div>
-      <div class="stat">
-        <div class="stat-value">50K+</div>
-        <div class="stat-label">Monthly Users</div>
-      </div>
-    </div>
+    <h1 data-i18n="hero.title">Discover the Best AI Tools</h1>
+    <p data-i18n="hero.desc">Your curated directory of 100+ AI-powered tools for writing, design, coding, video, and more. Find the perfect AI assistant for your workflow.</p>
+
+
   </section>
   
   <!-- SEARCH -->
@@ -620,34 +548,35 @@
         <circle cx="11" cy="11" r="8"/>
         <path d="M21 21l-4.35-4.35"/>
       </svg>
-      <input type="text" id="search" placeholder="Search AI tools..." autocomplete="off" />
+      <input type="text" id="search" data-i18n-placeholder="search.placeholder" placeholder="Search AI tools..." autocomplete="off" oninput="handleSearch(this.value)" />
     </div>
   </section>
-  
+
   <!-- CATEGORIES -->
   <section class="categories">
     <div class="category-tabs">
-      <button class="category-tab active" data-category="all">All Tools</button>
-      <button class="category-tab" data-category="writing">✍️ Writing</button>
-      <button class="category-tab" data-category="image">🎨 Image</button>
-      <button class="category-tab" data-category="coding">💻 Coding</button>
-      <button class="category-tab" data-category="video">🎬 Video</button>
-      <button class="category-tab" data-category="audio">🎵 Audio</button>
-      <button class="category-tab" data-category="chat">💬 Chat</button>
-      <button class="category-tab" data-category="productivity">⚡ Productivity</button>
+      <button class="category-tab active" data-category="all" data-i18n="cat.all">All Tools</button>
+      <button class="category-tab" data-category="writing" data-i18n="cat.writing">✍️ Writing</button>
+      <button class="category-tab" data-category="image" data-i18n="cat.image">🎨 Image</button>
+      <button class="category-tab" data-category="coding" data-i18n="cat.coding">💻 Coding</button>
+      <button class="category-tab" data-category="video" data-i18n="cat.video">🎬 Video</button>
+      <button class="category-tab" data-category="audio" data-i18n="cat.audio">🎵 Audio</button>
+      <button class="category-tab" data-category="chat" data-i18n="cat.chat">💬 Chat</button>
+      <button class="category-tab" data-category="productivity" data-i18n="cat.productivity">⚡ Productivity</button>
     </div>
   </section>
-  
+
   <!-- AD SLOT -->
   <section class="tools-section">
     <div class="ad-slot">
-      <div class="ad-slot-label">Advertisement</div>
+      <div class="ad-slot-label" data-i18n="ad.label">Advertisement</div>
       <ins class="adsbygoogle"
-           style="display:block"
+           style="display:inline-block;width:728px;height:90px"
            data-ad-client="ca-pub-4308687716218559"
-           data-ad-slot="XXXXXXXXXX"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
+           data-ad-slot="9760954495"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
     </div>
   </section>
   
@@ -663,98 +592,446 @@
     <div class="ad-slot">
       <div class="ad-slot-label">Advertisement</div>
       <ins class="adsbygoogle"
-           style="display:block"
+           style="display:inline-block;width:728px;height:90px"
            data-ad-client="ca-pub-4308687716218559"
-           data-ad-slot="XXXXXXXXXX"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
+           data-ad-slot="9760954495"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
     </div>
   </section>
   
   <!-- CTA -->
   <section class="cta-section">
-    <h2>Submit Your AI Tool</h2>
-    <p>Have an AI tool you want to feature? Get listed in our directory.</p>
+    <h2 data-i18n="cta.title">Submit Your AI Tool</h2>
+    <p data-i18n="cta.desc">Have an AI tool you want to feature? Get listed in our directory.</p>
     <a href="mailto:submit@aitoolsbox.com" class="cta-btn">
-      <span>Submit Tool</span>
+      <span data-i18n="cta.btn">Submit Tool</span>
       <span>→</span>
     </a>
   </section>
-  
+
   <!-- FOOTER -->
   <footer>
     <div class="footer-links">
-      <a href="/about">About</a>
-      <a href="/privacy">Privacy Policy</a>
-      <a href="/terms">Terms</a>
-      <a href="/contact">Contact</a>
+      <a href="/about" data-i18n="footer.about">About</a>
+      <a href="/privacy" data-i18n="footer.privacy">Privacy Policy</a>
+      <a href="/terms" data-i18n="footer.terms">Terms</a>
+      <a href="/contact" data-i18n="footer.contact">Contact</a>
     </div>
     <div class="footer-copy">
-      © 2026 AI Tools Box. All rights reserved.
+      © 2024 AI Tools Box. All rights reserved.
     </div>
   </footer>
-  
+
   <script>
-    // AI Tools Data with URLs
+    // ── i18n Translations ──
+    const i18n = {
+      en: {
+        'hero.badge': 'Updated for 2024', 'hero.title': 'Discover the Best AI Tools',
+        'hero.desc': 'Your curated directory of 100+ AI-powered tools for writing, design, coding, video, and more.',
+        'stat.tools': 'AI Tools', 'stat.categories': 'Categories', 'stat.users': 'Monthly Users',
+        'search.placeholder': 'Search AI tools...',
+        'cat.all': 'All Tools', 'cat.writing': '✍ Writing', 'cat.image': '🎨 Image',
+        'cat.coding': '💻 Coding', 'cat.video': '🎬 Video', 'cat.audio': '🎵 Audio',
+        'cat.chat': '💬 Chat', 'cat.productivity': '⚡ Productivity',
+        'ad.label': 'Advertisement',
+        'cta.title': 'Submit Your AI Tool', 'cta.desc': 'Have an AI tool you want to feature? Get listed in our directory.',
+        'cta.btn': 'Submit Tool',
+        'footer.about': 'About', 'footer.privacy': 'Privacy Policy', 'footer.terms': 'Terms', 'footer.contact': 'Contact',
+        'featured': 'Featured'
+      },
+      zh: {
+        'hero.badge': '2024年更新', 'hero.title': '发现最佳AI工具',
+        'hero.desc': '精选100多种AI工具目录，涵盖写作、设计、编程、视频等领域。找到适合您工作流程的AI助手。',
+        'stat.tools': 'AI工具', 'stat.categories': '分类', 'stat.users': '月活用户',
+        'search.placeholder': '搜索AI工具...',
+        'cat.all': '全部工具', 'cat.writing': '✍ 写作', 'cat.image': '🎨 图像',
+        'cat.coding': '💻 编程', 'cat.video': '🎬 视频', 'cat.audio': '🎵 音频',
+        'cat.chat': '💬 聊天', 'cat.productivity': '⚡ 效率',
+        'ad.label': '广告',
+        'cta.title': '提交您的AI工具', 'cta.desc': '有想要展示的AI工具？加入我们的目录。',
+        'cta.btn': '提交工具',
+        'footer.about': '关于', 'footer.privacy': '隐私政策', 'footer.terms': '条款', 'footer.contact': '联系我们',
+        'featured': '推荐'
+      },
+      ja: {
+        'hero.badge': '2024年更新', 'hero.title': '最高のAIツールを発見',
+        'hero.desc': '執筆、デザイン、コーディング、動画など、100以上のAIツールの厳選ディレクトリ。',
+        'stat.tools': 'AIツール', 'stat.categories': 'カテゴリ', 'stat.users': '月間ユーザー',
+        'search.placeholder': 'AIツールを検索...',
+        'cat.all': 'すべて', 'cat.writing': '✍ ライティング', 'cat.image': '🎨 画像',
+        'cat.coding': '💻 コーディング', 'cat.video': '🎬 動画', 'cat.audio': '🎵 音声',
+        'cat.chat': '💬 チャット', 'cat.productivity': '⚡ 生産性',
+        'ad.label': '広告',
+        'cta.title': 'AIツールを投稿', 'cta.desc': '紹介したいAIツールがありますか？ディレクトリに登録しましょう。',
+        'cta.btn': 'ツールを投稿',
+        'footer.about': '概要', 'footer.privacy': 'プライバシー', 'footer.terms': '利用規約', 'footer.contact': 'お問い合わせ',
+        'featured': '注目'
+      },
+      ko: {
+        'hero.badge': '2024년 업데이트', 'hero.title': '최고의 AI 도구 발견',
+        'hero.desc': '글쓰기, 디자인, 코딩, 비디오 등 100개 이상의 AI 도구 엄선 디렉토리.',
+        'stat.tools': 'AI 도구', 'stat.categories': '카테고리', 'stat.users': '월간 사용자',
+        'search.placeholder': 'AI 도구 검색...',
+        'cat.all': '전체', 'cat.writing': '✍ 글쓰기', 'cat.image': '🎨 이미지',
+        'cat.coding': '💻 코딩', 'cat.video': '🎬 비디오', 'cat.audio': '🎵 오디오',
+        'cat.chat': '💬 채팅', 'cat.productivity': '⚡ 생산성',
+        'ad.label': '광고',
+        'cta.title': 'AI 도구 제출', 'cta.desc': '소개하고 싶은 AI 도구가 있나요? 디렉토리에 등록하세요.',
+        'cta.btn': '도구 제출',
+        'footer.about': '개요', 'footer.privacy': '개인정보', 'footer.terms': '이용약관', 'footer.contact': '문의',
+        'featured': '추천'
+      },
+      es: {
+        'hero.badge': 'Actualizado 2024', 'hero.title': 'Descubre las Mejores Herramientas IA',
+        'hero.desc': 'Tu directorio curado de más de 100 herramientas de IA para escritura, diseño, programación, video y más.',
+        'stat.tools': 'Herramientas IA', 'stat.categories': 'Categorías', 'stat.users': 'Usuarios Mensuales',
+        'search.placeholder': 'Buscar herramientas IA...',
+        'cat.all': 'Todas', 'cat.writing': '✍ Escritura', 'cat.image': '🎨 Imagen',
+        'cat.coding': '💻 Programación', 'cat.video': '🎬 Video', 'cat.audio': '🎵 Audio',
+        'cat.chat': '💬 Chat', 'cat.productivity': '⚡ Productividad',
+        'ad.label': 'Publicidad',
+        'cta.title': 'Envía tu Herramienta IA', 'cta.desc': '¿Tienes una herramienta IA para destacar? Inclúyela en nuestro directorio.',
+        'cta.btn': 'Enviar Herramienta',
+        'footer.about': 'Acerca de', 'footer.privacy': 'Privacidad', 'footer.terms': 'Términos', 'footer.contact': 'Contacto',
+        'featured': 'Destacado'
+      },
+      fr: {
+        'hero.badge': 'Mis à jour 2024', 'hero.title': 'Découvrez les Meilleurs Outils IA',
+        'hero.desc': 'Votre annuaire de plus de 100 outils IA pour l\'écriture, le design, le codage, la vidéo et plus.',
+        'stat.tools': 'Outils IA', 'stat.categories': 'Catégories', 'stat.users': 'Utilisateurs Mensuels',
+        'search.placeholder': 'Rechercher des outils IA...',
+        'cat.all': 'Tous', 'cat.writing': '✍ Écriture', 'cat.image': '🎨 Image',
+        'cat.coding': '💻 Codage', 'cat.video': '🎬 Vidéo', 'cat.audio': '🎵 Audio',
+        'cat.chat': '💬 Chat', 'cat.productivity': '⚡ Productivité',
+        'ad.label': 'Publicité',
+        'cta.title': 'Soumettez votre Outil IA', 'cta.desc': 'Vous avez un outil IA à présenter? Ajoutez-le à notre annuaire.',
+        'cta.btn': 'Soumettre',
+        'footer.about': 'À propos', 'footer.privacy': 'Confidentialité', 'footer.terms': 'Conditions', 'footer.contact': 'Contact',
+        'featured': 'En vedette'
+      },
+      de: {
+        'hero.badge': 'Aktualisiert 2024', 'hero.title': 'Entdecke die besten KI-Tools',
+        'hero.desc': 'Ihr kuratiertes Verzeichnis von über 100 KI-Tools für Schreiben, Design, Programmierung, Video und mehr.',
+        'stat.tools': 'KI-Tools', 'stat.categories': 'Kategorien', 'stat.users': 'Monatliche Nutzer',
+        'search.placeholder': 'KI-Tools suchen...',
+        'cat.all': 'Alle', 'cat.writing': '✍ Schreiben', 'cat.image': '🎨 Bild',
+        'cat.coding': '💻 Programmierung', 'cat.video': '🎬 Video', 'cat.audio': '🎵 Audio',
+        'cat.chat': '💬 Chat', 'cat.productivity': '⚡ Produktivität',
+        'ad.label': 'Werbung',
+        'cta.title': 'Reichen Sie Ihr KI-Tool ein', 'cta.desc': 'Haben Sie ein KI-Tool vorzustellen? Listen Sie es in unserem Verzeichnis auf.',
+        'cta.btn': 'Einreichen',
+        'footer.about': 'Über', 'footer.privacy': 'Datenschutz', 'footer.terms': 'AGB', 'footer.contact': 'Kontakt',
+        'featured': 'Empfohlen'
+      },
+      ru: {
+        'hero.badge': 'Обновлено 2024', 'hero.title': 'Откройте лучшие ИИ-инструменты',
+        'hero.desc': 'Ваша подборка из более чем 100 ИИ-инструментов для письма, дизайна, программирования, видео и многого другого.',
+        'stat.tools': 'ИИ-инструменты', 'stat.categories': 'Категории', 'stat.users': 'Пользователей в месяц',
+        'search.placeholder': 'Поиск ИИ-инструментов...',
+        'cat.all': 'Все', 'cat.writing': '✍ Письмо', 'cat.image': '🎨 Изображения',
+        'cat.coding': '💻 Код', 'cat.video': '🎬 Видео', 'cat.audio': '🎵 Аудио',
+        'cat.chat': '💬 Чат', 'cat.productivity': '⚡ Продуктивность',
+        'ad.label': 'Реклама',
+        'cta.title': 'Добавьте свой ИИ-инструмент', 'cta.desc': 'Есть ИИ-инструмент? Добавьте его в наш каталог.',
+        'cta.btn': 'Отправить',
+        'footer.about': 'О нас', 'footer.privacy': 'Конфиденциальность', 'footer.terms': 'Условия', 'footer.contact': 'Контакты',
+        'featured': 'Рекомендуем'
+      },
+      ar: {
+        'hero.badge': 'تحديث 2024', 'hero.title': 'اكتشف أفضل أدوات الذكاء الاصطناعي',
+        'hero.desc': 'دليلك المختار لأكثر من 100 أداة ذكاء اصطناعي للكتابة والتصميم والبرمجة والفيديو والمزيد.',
+        'stat.tools': 'أدوات الذكاء الاصطناعي', 'stat.categories': 'الفئات', 'stat.users': 'مستخدمون شهرياً',
+        'search.placeholder': 'ابحث عن أدوات الذكاء الاصطناعي...',
+        'cat.all': 'جميع الأدوات', 'cat.writing': '✍ كتابة', 'cat.image': '🎨 صورة',
+        'cat.coding': '💻 برمجة', 'cat.video': '🎬 فيديو', 'cat.audio': '🎵 صوت',
+        'cat.chat': '💬 دردشة', 'cat.productivity': '⚡ إنتاجية',
+        'ad.label': 'إعلان',
+        'cta.title': 'أضف أداة الذكاء الاصطناعي', 'cta.desc': 'هل لديك أداة تريد عرضها؟ أضفها إلى دليلنا.',
+        'cta.btn': 'إرسال',
+        'footer.about': 'حول', 'footer.privacy': 'الخصوصية', 'footer.terms': 'الشروط', 'footer.contact': 'اتصل بنا',
+        'featured': 'مميز'
+      },
+      pt: {
+        'hero.badge': 'Atualizado 2024', 'hero.title': 'Descubra as Melhores Ferramentas de IA',
+        'hero.desc': 'Seu diretório selecionado de mais de 100 ferramentas de IA para escrita, design, programação, vídeo e muito mais.',
+        'stat.tools': 'Ferramentas IA', 'stat.categories': 'Categorias', 'stat.users': 'Usuários Mensais',
+        'search.placeholder': 'Buscar ferramentas IA...',
+        'cat.all': 'Todas', 'cat.writing': '✍ Escrita', 'cat.image': '🎨 Imagem',
+        'cat.coding': '💻 Programação', 'cat.video': '🎬 Vídeo', 'cat.audio': '🎵 Áudio',
+        'cat.chat': '💬 Chat', 'cat.productivity': '⚡ Produtividade',
+        'ad.label': 'Publicidade',
+        'cta.title': 'Envie sua Ferramenta de IA', 'cta.desc': 'Tem uma ferramenta de IA para destacar? Inclua-a em nosso diretório.',
+        'cta.btn': 'Enviar',
+        'footer.about': 'Sobre', 'footer.privacy': 'Privacidade', 'footer.terms': 'Termos', 'footer.contact': 'Contato',
+        'featured': 'Destaque'
+      }
+    };
+
+    // ── Tool description translations (name stays original, only desc is translated) ──
+    const toolDescs = {
+      "ChatGPT": {
+        zh: "OpenAI开发的先进AI聊天机器人，支持对话、写作、编程等多种场景。", ja: "OpenAIによる高度なAIチャットボット。会話、執筆、コーディングなどをサポート。", ko: "대화, 글쓰기, 코딩 등을 지원하는 OpenAI의 고급 AI 챗봇.", es: "Chatbot IA avanzado de OpenAI para conversaciones, escritura, codificación y más.", fr: "Chatbot IA avancé d'OpenAI pour les conversations, l'écriture, le codage et plus.", de: "Fortschrittlicher KI-Chatbot von OpenAI für Gespräche, Schreiben, Programmierung und mehr.", ru: "Продвинутый ИИ-чатбот OpenAI для общения, письма, программирования и не только.", ar: "روبوت محادثة ذكاء اصطناعي متقدم من OpenAI للمحادثات والكتابة والترميز والمزيد.", pt: "Chatbot IA avançado da OpenAI para conversas, escrita, codificação e muito mais."
+      },
+      "Claude": {
+        zh: "Anthropic开发的AI助手，以深思熟虑、长上下文窗口著称。", ja: "思慮深く長いコンテキストウィンドウで知られるAnthropicのAIアシスタント。", ko: "깊이 있는 응답과 긴 컨텍스트 창으로 유명한 Anthropic의 AI 어시스턴트.", es: "Asistente IA de Anthropic conocido por respuestas reflexivas y amplio contexto.", fr: "Assistant IA d'Anthropic connu pour ses réponses nuancées et sa grande fenêtre contextuelle.", de: "KI-Assistent von Anthropic, bekannt für durchdachte Antworten und lange Kontextfenster.", ru: "ИИ-ассистент Anthropic, известный продуманными ответами и большим контекстом.", ar: "مساعد ذكاء اصطناعي من Anthropic معروف باستجاباته المتأنية ونافذة السياق الطويلة.", pt: "Assistente IA da Anthropic conhecido por respostas ponderadas e janela de contexto ampla."
+      },
+      "Midjourney": {
+        zh: "根据文字提示生成惊艳艺术作品的AI图像生成器。", ja: "テキストプロンプトから素晴らしいアートワークを生成するAI画像生成器。", ko: "텍스트 프롬프트에서惊艳한 예술 작품을 생성하는 AI 이미지 생성기.", es: "Generador de imágenes IA que crea impresionantes obras de arte a partir de texto.", fr: "Générateur d'images IA créant de superbes œuvres d'art à partir de prompts texte.", de: "KI-Bildgenerator, der atemberaubende Kunstwerke aus Textprompts erstellt.", ru: "Генератор изображений ИИ, создающий потрясающие произведения искусства из текстовых запросов.", ar: "مولد صور ذكاء اصطناعي ينشئ أعمالاً فنية مذهلة من المطالبات النصية.", pt: "Gerador de imagens IA que cria obras de arte impressionantes a partir de prompts de texto."
+      },
+      "DALL-E 3": {
+        zh: "OpenAI的图像生成模型，擅长逼真的照片级输出。", ja: "写真のような出力を得意とするOpenAIの画像生成モデル。", ko: "사실적인 사진 품질 출력을得意하는 OpenAI 이미지 생성 모델.", es: "Modelo de generación de imágenes de OpenAI con resultados fotorrealistas.", de: "Bildgenerierungsmodell von OpenAI mit fotorealistischen Ausgaben.", ru: "Модель генерации изображений OpenAI с фотореалистичными результатами.", ar: "نموذج توليد الصور من OpenAI مع مخرجات واقعية.", pt: "Modelo de geração de imagens da OpenAI com resultados fotorrealistas."
+      },
+      "Stable Diffusion": {
+        zh: "开源图像生成模型，支持本地运行或通过服务使用。", ja: "ローカルまたはサービスで実行できるオープンソースの画像生成モデル。", ko: "로컬 또는 서비스를 통해 실행할 수 있는 오픈소스 이미지 생성 모델.", es: "Modelo de generación de imágenes de código abierto, ejecutable localmente o vía servicios.", de: "Open-Source-Bildgenerierungsmodell, lokal oder über Dienste ausführbar.", ru: "Модель генерации изображений с открытым исходным кодом, работающая локально или через сервисы.", ar: "نموذج مفتوح المصدر لتوليد الصور، يعمل محلياً أو عبر الخدمات.", pt: "Modelo de geração de imagens de código aberto, executável localmente ou via serviços."
+      },
+      "GitHub Copilot": {
+        zh: "AI结对编程助手，实时提供代码建议。", ja: "リアルタイムでコードを提案するAIペアプログラミングアシスタント。", ko: "실시간으로 코드 제안을 제공하는 AI 페어 프로그래밍 어시스턴트.", es: "Asistente de programación en pareja IA que sugiere código en tiempo real.", de: "KI-Pair-Programmierer, der Code in Echtzeit vorschlägt.", ru: "ИИ-помощник для парного программирования, предлагающий код в реальном времени.", ar: "مساعد برمجة زوجي بالذكاء الاصطناعي يقترح الكود في الوقت الفعلي.", pt: "Assistente de programação em par IA que sugere código em tempo real."
+      },
+      "Cursor": {
+        zh: "AI优先的代码编辑器，深度理解代码库。", ja: "コードベースを深く理解するAIファーストのコードエディタ。", ko: "코드베이스를 깊이 이해하는 AI 우선 코드 에디터.", es: "Editor de código IA primero con comprensión profunda del código base.", de: "KI-nativer Code-Editor mit tiefem Codebase-Verständnis.", ru: "Редактор кода на базе ИИ с глубоким пониманием кодовой базы.", ar: "محرر كود يعتمد الذكاء الاصطناعي مع فهم عميق لقاعدة الكود.", pt: "Editor de código IA-first com compreensão profunda da base de código."
+      },
+      "Jasper": {
+        zh: "AI写作助手，专注文案、博客和社交媒体内容创作。", ja: "マーケティングコピー、博客、SNSコンテンツのためのAI執筆アシスタント。", ko: "마케팅 카피, 블로그, SNS 콘텐츠를 위한 AI 글쓰기 어시스턴트.", es: "Asistente IA de escritura para copias de marketing, blogs y redes sociales.", de: "KI-Schreibassistent für Marketing-Texte, Blogs und Social Media.", ru: "ИИ-ассистент для маркетинговых текстов, блогов и соцсетей.", ar: "مساعد كتابة ذكاء اصطناعي لنسخ التسويق والمدونات ووسائل التواصل.", pt: "Assistente IA de escrita para copy de marketing, blogs e mídia social."
+      },
+      "Copy.ai": {
+        zh: "几秒钟内生成营销文案、邮件和内容。", ja: "数秒でマーケティングコピー、Eメール、コンテンツを生成。", ko: "수초 만에 마케팅 카피, 이메일, 콘텐츠를 생성.", es: "Genera copias de marketing, correos y contenido en segundos.", de: "Erstellt in Sekunden Marketing-Texte, E-Mails und Content.", ru: "Генерирует маркетинговые тексты, письма и контент за секунды.", ar: "ينشئ نسخ التسويق والبريد الإلكتروني والمحتوى في ثوانٍ.", pt: "Gera copy de marketing, e-mails e conteúdo em segundos."
+      },
+      "Notion AI": {
+        zh: "Notion内置的AI写作和摘要功能。", ja: "Notion 内蔵のAI執筆・要約機能。", ko: "Notion 내부 AI 글쓰기 및 요약 기능.", es: "Escritura y resumen IA integrado en Notion.", de: "KI-Schreiben und Zusammenfassungen direkt in Notion.", ru: "ИИ-написание и суммаризация прямо в Notion.", ar: "كتابة وملخص الذكاء الاصطناعي داخل Notion.", pt: "Escrita e resumo IA dentro do Notion."
+      },
+      "Runway ML": {
+        zh: "为创作者提供的AI视频编辑和生成工具。", ja: "クリエイター向けAI動画編集・生成ツール。", ko: "크리에이터를 위한 AI 비디오 편집 및 생성 도구.", es: "Herramientas de edición y generación de video IA para creadores.", de: "KI-Video-Editing und Generierungstools für Kreative.", ru: "ИИ-инструменты для редактирования и создания видео для создателей контента.", ar: "أدوات تحرير وتوليد الفيديو بالذكاء الاصطناعي للمبدعين.", pt: "Ferramentas de edição e geração de vídeo IA para criadores."
+      },
+      "Pika Labs": {
+        zh: "文字转视频AI，从提示词创建短视频片段。", ja: "プロンプトから短いクリップを生成するテキストから動画へのAI。", ko: "프롬프트에서 짧은 클립을 만드는 텍스트-투-비디오 AI.", es: "IA de texto a video para crear clips cortos a partir de indicaciones.", de: "Text-zu-Video-KI zum Erstellen kurzer Clips aus Prompts.", ru: "ИИ для преобразования текста в видео, создающий короткие клипы из запросов.", ar: "ذكاء اصطناعي لتحويل النص إلى فيديو لإنشاء مقاطع قصيرة من المطالبات.", pt: "IA de texto para vídeo para criar clipes curtos a partir de prompts."
+      },
+      "ElevenLabs": {
+        zh: "自然语音合成的AI语音工具。", ja: "自然な音声合成を提供するAI音声ツール。", ko: "자연스러운 음성 합성 AI 음성 도구.", es: "Herramienta de voz IA con síntesis de voz natural.", de: "KI-Stimm-Tool mit natürlicher Sprachsynthese.", ru: "ИИ-инструмент для синтеза естественной речи.", ar: "أداة صوت ذكاء اصطناعي لتوليد الكلام الطبيعي.", pt: "Ferramenta de voz IA com síntese de fala natural."
+      },
+      "Murf AI": {
+        zh: "为视频和演示文稿提供AI配音生成器。", ja: "動画やプレゼンテーション用のAI音声over生成器。", ko: "비디오 및 프레젠테이션용 AI 보이스오버 생성기.", es: "Generador de locuciones IA para videos y presentaciones.", de: "KI-Voiceover-Generator für Videos und Präsentationen.", ru: "Генератор ИИ-озвучки для видео и презентаций.", ar: "مولد التعليق الصوتي بالذكاء الاصطناعي للفيديو والعروض التقديمية.", pt: "Gerador de narração IA para vídeos e apresentações."
+      },
+      "Perplexity AI": {
+        zh: "带引用来源的AI驱动搜索引擎。", ja: "引用ソース付きAI駆動型検索エンジン。", ko: "인용 소스와 함께 제공되는 AI 기반 검색 엔진.", es: "Motor de búsqueda IA con fuentes citadas.", de: "Von KI angetriebene Suchmaschine mit zitierten Quellen.", ru: "Поисковая система на базе ИИ с цитируемыми источниками.", ar: "محرك بحث يعمل بالذكاء الاصطناعي مع مصادر مقتبسة.", pt: "Motor de busca impulsionado por IA com fontes citadas."
+      },
+      "Anthropic Claude": {
+        zh: "安全的AI助手，拥有20万上下文窗口。", ja: "20万コンテキストウィンドウを持つ安全で有帮助なAIアシスタント。", ko: "20K 컨텍스트 윈도우를 가진 안전한 유용한 AI 어시스턴트.", es: "Asistente IA seguro y útil con ventana de contexto de 200K.", de: "Sicherer, hilfreicher KI-Assistent mit 200K-Kontextfenster.", ru: "Безопасный и полезный ИИ-ассистент с контекстом 200K.", ar: "مساعد ذكاء اصطناعي آمن ومفيد مع نافذة سياق 200K.", pt: "Assistente IA seguro e útil com janela de contexto de 200K."
+      },
+      "Leonardo AI": {
+        zh: "针对游戏资产微调的AI图像生成工具。", ja: "ゲームアセット用に微調整されたAI画像生成ツール。", ko: "게임 에셋을 위해 미세 조정된 AI 이미지 생성 도구.", es: "Herramienta de generación de imágenes IA ajustada para activos de juegos.", de: "KI-Bildgenerierungstool, feinabgestimmt auf Spiel-Assets.", ru: "Инструмент генерации изображений ИИ, настроенный для игровых ассетов.", ar: "أداة توليد الصور بالذكاء الاصطناعي المحسنة للأصول اللعبة.", pt: "Ferramenta de geração de imagens IA ajustada para ativos de jogos."
+      },
+      "Ideogram": {
+        zh: "擅长在图像中渲染文字的AI图像生成器。", ja: "画像内のテキスト描画に優れたAI画像生成器。", ko: "이미지 내 텍스트 렌더링에 탁월한 AI 이미지 생성기.", es: "Generador de imágenes IA que destaca en texto dentro de imágenes.", de: "KI-Bildgenerator, der sich bei Text in Bildern auszeichnet.", ru: "Генератор изображений ИИ, превосходно работающий с текстом на изображениях.", ar: "مولد صور الذكاء الاصطناعي المتفوق في النص داخل الصور.", pt: "Gerador de imagens IA excelente em texto dentro de imagens."
+      },
+      "Tabnine": {
+        zh: "支持所有主流语言的AI代码补全工具。", ja: "すべての主要な言語をサポートするAIコード補完ツール。", ko: "모든 주요 언어를 지원하는 AI 코드 완성 도구.", es: "Herramienta de completado de código IA que soporta todos los lenguajes principales.", de: "KI-Code-Completion-Tool für alle gängigen Sprachen.", ru: "Инструмент автодополнения кода ИИ, поддерживающий все основные языки.", ar: "أداة إكمال الكود بالذكاء اصطناعي تدعم جميع اللغات الرئيسية.", pt: "Ferramenta de conclusão de código IA que suporta todas as principais linguagens."
+      },
+      "Replit AI": {
+        zh: "内置于Replit IDE的AI编程助手。", ja: "Replit IDEに組み込まれたAIコーディングアシスタント。", ko: "Replit IDE에 내장된 AI 코딩 어시스턴트.", es: "Asistente de codificación IA integrado en el IDE Replit.", de: "KI-Coding-Assistent in der Replit-IDE.", ru: "ИИ-помощник по программированию, встроенный в Replit IDE.", ar: "مساعد ترميز الذكاء الاصطناعي المدمج في Replit IDE.", pt: "Assistente de codificação IA integrado no Replit IDE."
+      },
+      "Writer.com": {
+        zh: "面向团队的企业级AI写作平台。", ja: "チーム向けのエンタープライズAIライティングプラットフォーム。", ko: "팀을 위한 엔터프라이즈 AI 글쓰기 플랫폼.", es: "Plataforma de escritura IA empresarial para equipos.", de: "Enterprise-KI-Schreibplattform für Teams.", ru: "Корпоративная платформа ИИ-написания для команд.", ar: "منصة كتابة الذكاء الاصطناعي للمؤسسات للفرق.", pt: "Plataforma de escrita IA empresarial para equipes."
+      },
+      "Rytr": {
+        zh: "经济实惠的AI写作助手，支持多种内容类型。", ja: "Variousコンテンツ类型向けの 저렴한AI執筆アシスタント。", ko: "다양한 콘텐츠 유형을 위한 저렴한 AI 글쓰기 어시스턴트.", es: "Asistente de escritura IA asequible para varios tipos de contenido.", de: "Erschwinglicher KI-Schreibassistent für verschiedene Content-Typen.", ru: "Доступный ИИ-ассистент для создания различного контента.", ar: "مساعد كتابة ذكاء اصطناعي بأسعار معقولة لأنواع المحتوى المختلفة.", pt: "Assistente de escrita IA acessível para vários tipos de conteúdo."
+      },
+      "Synthesia": {
+        zh: "使用虚拟形象进行AI视频生成。", ja: "仮想アバターを使用したAI動画生成。", ko: "가상 아바타로 AI 비디오 생성.", es: "Generación de video IA con avatares virtuales.", de: "KI-Videogenerierung mit virtuellen Avataren.", ru: "Генерация видео ИИ с виртуальными аватарами.", ar: "توليد الفيديو بالذكاء الاصطناعي مع الشخصيات الافتراضية.", pt: "Geração de vídeo IA com avatares virtuais."
+      },
+      "Descript": {
+        zh: "通过编辑文本来进行AI驱动的视频和播客编辑。", ja: "テキスト編集で動画とポッドキャストを編集するAI駆動型ツール。", ko: "텍스트 편집으로 영상과 팟캐스트를 편집하는 AI 도구.", es: "Edición de video y podcast impulsada por IA mediante edición de texto.", de: "KI-gestützte Video- und Podcast-Bearbeitung durch Textbearbeitung.", ru: "ИИ-редактирование видео и подкастов через редактирование текста.", ar: "تحرير الفيديو والبودكاست بالذكاء الاصطناعي من خلال تحرير النص.", pt: "Edição de vídeo e podcast impulsionada por IA editando texto."
+      },
+      "Suno AI": {
+        zh: "根据文字提示生成AI音乐。", ja: "テキストプロンプトからAI音楽を生成。", ko: "텍스트 프롬프트에서 AI 음악을 생성.", es: "Generación de música IA a partir de indicaciones de texto.", de: "KI-Musikgenerierung aus Textprompts.", ru: "Генерация музыки ИИ из текстовых запросов.", ar: "توليد الموسيقى بالذكاء الاصطناعي من المطالبات النصية.", pt: "Geração de música IA a partir de prompts de texto."
+      },
+      "Whisper": {
+        zh: "OpenAI的高精度语音转文字模型。", ja: "OpenAIの高精度音声認識モデル。", ko: "OpenAI의 고도 음성-텍스트 모델.", es: "Modelo de speech-to-text de OpenAI con alta precisión.", de: "Hochpräzises Speech-to-Text-Modell von OpenAI.", ru: "Высокоточной модель преобразования речи в текст от OpenAI.", ar: "نموذج الكلام إلى النص عالي الدقة من OpenAI.", pt: "Modelo de fala para texto de alta precisão da OpenAI."
+      },
+      "Gamma": {
+        zh: "AI驱动的演示文稿和文档生成工具。", ja: "AI駆動型プレゼンテーション・ドキュメント生成ツール。", ko: "AI 기반 프레젠테이션 및 문서 생성 도구.", es: "Herramienta de generación de presentaciones y documentos impulsada por IA.", de: "KI-gestütztes Tool zur Präsentations- und Dokumentenerstellung.", ru: "Инструмент для создания презентаций и документов на базе ИИ.", ar: "أداة إنشاء العروض التقديمية والمستندات بالذكاء الاصطناعي.", pt: "Ferramenta de geração de apresentações e documentos impulsionada por IA."
+      },
+      "Otter.ai": {
+        zh: "AI会议转录和笔记工具。", ja: "AI会議文字起こし・ノートツール。", ko: "AI 회의 전사 및 노트 도구.", es: "Herramienta de transcripción y notas de reuniones IA.", de: "KI-Tool für Meeting-Transkription und Notizen.", ru: "ИИ-инструмент для транскрипции и заметок совещаний.", ar: "أداة النسخ والملاحظات للاجتماعات بالذكاء الاصطناعي.", pt: "Ferramenta de transcrição e anotações de reuniões IA."
+      },
+      "Grammarly": {
+        zh: "AI写作助手，专注语法和风格检查。", ja: "文法とスタイルをチェックするAI執筆アシスタント。", ko: "문법과 스타일을 검사하는 AI 글쓰기 어시스턴트.", es: "Asistente IA de escritura para gramática y estilo.", de: "KI-Schreibassistent für Grammatik und Stil.", ru: "ИИ-ассистент для проверки грамматики и стиля.", ar: "مساعد كتابة ذكاء اصطناعي للقواعد والأسلوب.", pt: "Assistente IA de escrita para gramática e estilo."
+      },
+      "Quillbot": {
+        zh: "AI改写和重述工具。", ja: "AIリライティング・リフレーズツール。", ko: "AI 재작성 및 재표현 도구.", es: "Herramienta IA de parafraseo y reescritura.", de: "KI-Paraphrasing- und Umschreibungs-Tool.", ru: "ИИ-инструмент для перефразирования и переписывания.", ar: "أداة إعادة الصياغة بالذكاء الاصطناعي.", pt: "Ferramenta IA de paráfrase e reescrita."
+      },
+      "Canva AI": {
+        zh: "Canva内置的AI设计功能。", ja: "Canva 内蔵のAIデザイン機能。", ko: "Canva 내부 AI 디자인 기능.", es: "Funciones de diseño IA integradas en Canva.", de: "KI-Designfunktionen in Canva.", ru: "Функции ИИ-дизайна, встроенные в Canva.", ar: "ميزات تصميم الذكاء الاصطناعي داخل Canva.", pt: "Recursos de design IA dentro do Canva."
+      },
+      "Remove.bg": {
+        zh: "AI图像背景移除工具。", ja: "AI画像背景削除ツール。", ko: "AI 이미지 배경 제거 도구.", es: "Herramienta IA de eliminación de fondo de imágenes.", de: "KI-Tool zum Entfernen von Bildhintergründen.", ru: "ИИ-инструмент для удаления фона изображений.", ar: "أداة إزالة خلفية الصورة بالذكاء الاصطناعي.", pt: "Ferramenta IA de remoção de fundo de imagens."
+      },
+      "PhotoRoom": {
+        zh: "AI照片编辑和背景移除工具。", ja: "AI写真編集・背景削除ツール。", ko: "AI 사진 편집 및 배경 제거 도구.", es: "Herramienta de edición de fotos IA y eliminación de fondo.", de: "KI-Fotobearbeitung und Hintergrundentfernung.", ru: "ИИ-инструмент для редактирования фото и удаления фона.", ar: "أداة تحرير الصور وإزالة الخلفية بالذكاء الاصطناعي.", pt: "Edição de fotos IA e remoção de fundo."
+      },
+      "Codeium": {
+        zh: "免费AI代码补全，支持多种IDE。", ja: "複数のIDEをサポートする免费AIコード補完。", ko: "여러 IDE를 지원하는 무료 AI 코드 완성.", es: "Completado de código IA gratuito para múltiples IDEs.", de: "Kostenlose KI-Code-Vervollständigung für mehrere IDEs.", ru: "Бесплатное автодополнение кода для нескольких IDE.", ar: "إكمال الكود بالذكاء الاصطناعي مجاناً لعدة بيئات تطوير.", pt: "Conclusão de código IA gratuita para múltiplos IDEs."
+      },
+      "Amazon CodeWhisperer": {
+        zh: "AWS开发者AI编程助手。", ja: "AWS開発者向けAIコーディングアシスタント。", ko: "AWS 개발자용 AI 코딩 어시스턴트.", es: "Asistente de codificación IA para desarrolladores de AWS.", de: "KI-Coding-Assistent für AWS-Entwickler.", ru: "ИИ-помощник по программированию для разработчиков AWS.", ar: "مساعد البرمجة بالذكاء الاصطناعي لمطوري AWS.", pt: "Assistente de codificação IA para desenvolvedores AWS."
+      },
+      "Hugging Face": {
+        zh: "机器学习模型和AI工具平台。", ja: "MLモデルとAIツールのプラットフォーム。", ko: "머신러닝 모델 및 AI 도구 플랫폼.", es: "Plataforma para modelos de aprendizaje automático y herramientas IA.", de: "Plattform für ML-Modelle und KI-Tools.", ru: "Платформа для моделей машинного обучения и ИИ-инструментов.", ar: "منصة نماذج التعلم الآلي وأدوات الذكاء الاصطناعي.", pt: "Plataforma para modelos de aprendizado de máquina e ferramentas IA."
+      },
+      "Replicate": {
+        zh: "通过API运行开源AI模型。", ja: "APIでオープンソースAIモデルを実行。", ko: "API를 통해 오픈소스 AI 모델 실행.", es: "Ejecuta modelos IA de código abierto a través de API.", de: "Führe Open-Source-KI-Modelle über die API aus.", ru: "Запуск моделей ИИ с открытым исходным кодом через API.", ar: "تشغيل نماذج الذكاء الاصطناعي مفتوحة المصدر عبر API.", pt: "Execute modelos IA de código aberto via API."
+      },
+      "Loom AI": {
+        zh: "面向团队的AI驱动视频消息工具。", ja: "チーム向けAI駆動型動画メッセージツール。", ko: "팀을 위한 AI 기반 비디오 메시지 도구.", es: "Herramienta de mensajes de video IA para equipos.", de: "KI-gestütztes Video-Messaging-Tool für Teams.", ru: "ИИ-инструмент для видеосообщений в командах.", ar: "أداة الرسائل المرئية بالذكاء الاصطناعي للفرق.", pt: "Ferramenta de mensagens de vídeo IA para equipes."
+      },
+      "Fireflies.ai": {
+        zh: "AI会议笔记和转录工具。", ja: "AI会議ノート・文字起こしツール。", ko: "AI 회의 노트 및 전사 도구.", es: "Herramienta de notas y transcripción de reuniones IA.", de: "KI-Tool für Meeting-Notizen und -Transkription.", ru: "ИИ-инструмент для заметок и транскрипции совещаний.", ar: "أداة الملاحظات والنسخ للاجتماعات بالذكاء الاصطناعي.", pt: "Ferramenta de notas e transcrição de reuniões IA."
+      },
+      "Motion": {
+        zh: "AI日历和任务调度工具。", ja: "AIカレンダー・タスクスケジューリングツール。", ko: "AI 캘린더 및 작업 스케줄링 도구.", es: "Herramienta de calendario y programación de tareas IA.", de: "KI-Tool für Kalender und Aufgabenplanung.", ru: "ИИ-инструмент для календаря и планирования задач.", ar: "أداة التقويم وجدولة المهام بالذكاء الاصطناعي.", pt: "Ferramenta de calendário e agendamento de tarefas IA."
+      },
+      "Reclaim.ai": {
+        zh: "保护个人时间的AI日程管理工具。", ja: "個人の時間を守るAIスケジューリングツール。", ko: "개인 시간을 보호하는 AI 일정 관리 도구.", es: "Herramienta de programación IA que protege tu tiempo.", de: "KI-Tool zur Zeitplanung, das Ihre Zeit schützt.", ru: "ИИ-инструмент для управления расписанием, защищающий ваше время.", ar: "أداة إدارة الجدول الزمني بالذكاء الاصطناعي التي تحمي وقتك.", pt: "Ferramenta de agendamento IA que protege seu tempo."
+      },
+      "SaneBox": {
+        zh: "AI邮件过滤和优先级排序工具。", ja: "AIメールフィルタリング・優先順位付けツール。", ko: "AI 이메일 필터링 및 우선순위 도구.", es: "Herramienta de filtrado y priorización de correo IA.", de: "KI-Tool für E-Mail-Filterung und Priorisierung.", ru: "ИИ-инструмент для фильтрации и приоритизации почты.", ar: "أداة تصفية البريد الإلكتروني وتحديد الأولويات بالذكاء الاصطناعي.", pt: "Ferramenta de filtragem e priorização de e-mail IA."
+      },
+      "Superhuman": {
+        zh: "速度优先的AI驱动邮件客户端。", ja: "スピード重視のAI駆動型メールクライアント。", ko: "속도를 우선시하는 AI 기반 이메일 클라이언트.", es: "Cliente de correo IA centrado en la velocidad.", de: "KI-gestützter E-Mail-Client mit Fokus auf Geschwindigkeit.", ru: "ИИ-почтовый клиент с упором на скорость.", ar: "عميل البريد الإلكتروني بالذكاء الاصطناعي مع التركيز على السرعة.", pt: "Cliente de e-mail IA com foco em velocidade."
+      },
+      "Mem": {
+        zh: "AI驱动的笔记和知识库工具。", ja: "AI駆動型ノート・ナレッジベースツール。", ko: "AI 기반 노트 및 지식 베이스 도구.", es: "Herramienta de notas y base de conocimientos impulsada por IA.", de: "KI-gestütztes Tool für Notizen und Wissensdatenbank.", ru: "ИИ-инструмент для заметок и базы знаний.", ar: "أداة الملاحظات وقاعدة المعرفة بالذكاء الاصطناعي.", pt: "Ferramenta de notas e base de conhecimento impulsionada por IA."
+      },
+      "Reflect": {
+        zh: "具有网络思维功能的AI笔记工具。", ja: "ネットワーク思考機能を備えたAIノートツール。", ko: "네트워크 사고 기능을 갖춘 AI 노트 도구.", es: "Herramienta de notas IA con pensamiento en red.", de: "KI-Notiz-Tool mit vernetztem Denken.", ru: "ИИ-инструмент для заметок с сетевым мышлением.", ar: "أداة الملاحظات بالذكاء الاصطناعي مع التفكير الشبكي.", pt: "Ferramenta de notas IA com pensamento em rede."
+      },
+      "Taskade": {
+        zh: "AI驱动的项目管理与任务工具。", ja: "AI駆動型プロジェクト管理・タスクツール。", ko: "AI 기반 프로젝트 관리 및 작업 도구.", es: "Gestión de proyectos y tareas impulsada por IA.", de: "KI-gestütztes Projektmanagement und Aufgaben.", ru: "ИИ-управление проектами и задачами.", ar: "إدارة المشاريع والمهام بالذكاء الاصطناعي.", pt: "Gerenciamento de projetos e tarefas impulsionado por IA."
+      },
+      "Magical": {
+        zh: "AI文本扩展和自动化工具。", ja: "AIテキスト展開・自動化ツール。", ko: "AI 텍스트 확장은 자동화 도구.", es: "Herramienta de expansión de texto y automatización IA.", de: "KI-Text-Expander und Automatisierung.", ru: "ИИ-инструмент для расширения текста и автоматизации.", ar: "أداة توسيع النص والأتمتة بالذكاء الاصطناعي.", pt: "Ferramenta de expansão de texto e automação IA."
+      },
+      "Texts.com": {
+        zh: "支持AI功能的多合一消息平台。", ja: "AI機能を 지원하는オールインワンメッセージングプラットフォーム。", ko: "AI 기능을 지원하는 올인원 메시징 플랫폼.", es: "Plataforma de mensajería todo-en-uno con funciones IA.", de: "All-in-One-Messaging-Plattform mit KI-Funktionen.", ru: "Единая платформа обмена сообщениями с функциями ИИ.", ar: "منصة المراسلة الشاملة مع ميزات الذكاء الاصطناعي.", pt: "Plataforma de mensagens tudo-em-um com recursos IA."
+      },
+      "Arc Browser": {
+        zh: "具有智能功能的AI驱动浏览器。", ja: "スマート機能を備えたAI駆動型ブラウザー。", ko: "스마트 기능을 갖춘 AI 기반 브라우저.", es: "Navegador impulsado por IA con funciones inteligentes.", de: "KI-gestützter Browser mit intelligenten Funktionen.", ru: "Браузер на базе ИИ с умными функциями.", ar: "متصفح يعمل بالذكاء الاصطناعي مع ميزات ذكية.", pt: "Navegador impulsionado por IA com recursos inteligentes."
+      },
+      "Raycast": {
+        zh: "具有AI扩展的Mac启动器。", ja: "AI拡張を備えたMacランチャー。", ko: "AI 확장 기능을 갖춘 Mac 런처.", es: "Lanzador para Mac con extensiones IA.", de: "Mac-Launcher mit KI-Erweiterungen.", ru: "Лаунчер для Mac с ИИ-расширениями.", ar: "م要知道 для Mac مع ملحقات الذكاء الاصطناعي.", pt: "Lançador para Mac com extensões IA."
+      }
+    };
+
+    function getToolDesc(name, lang) {
+      if (lang === 'en') return null; // use original desc
+      const descs = toolDescs[name];
+      if (descs && descs[lang]) return descs[lang];
+      return null; // fall back to original English desc
+    }
+
+    let currentLang = 'en';
+
+    function toggleLangDropdown() {
+      document.getElementById('langDropdown').classList.toggle('show');
+    }
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      document.getElementById('currentLang').textContent = lang.toUpperCase();
+      document.getElementById('langDropdown').classList.remove('show');
+
+      // Update all i18n elements
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (i18n[lang] && i18n[lang][key]) el.textContent = i18n[lang][key];
+      });
+
+      // Update placeholders
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (i18n[lang] && i18n[lang][key]) el.placeholder = i18n[lang][key];
+      });
+
+      // Update active state
+      document.querySelectorAll('.lang-option').forEach(opt => opt.classList.remove('active'));
+      event.target.classList.add('active');
+
+      // Re-render tools with new language
+      renderTools(tools);
+    }
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.lang-selector')) {
+        document.getElementById('langDropdown').classList.remove('show');
+      }
+    });
+
+    // AI Tools Data
     const tools = [
-      { name: "ChatGPT", url: "https://chat.openai.com", category: "chat", icon: "💬", desc: "Advanced AI chatbot by OpenAI for conversations, writing, coding, and more.", tags: ["Free", "Popular"], rating: 4.9, featured: true },
-      { name: "Claude", url: "https://claude.ai", category: "chat", icon: "🤖", desc: "Anthropic's AI assistant known for thoughtful, nuanced responses and long context.", tags: ["Free", "New"], rating: 4.8 },
-      { name: "Midjourney", url: "https://midjourney.com", category: "image", icon: "🎨", desc: "AI image generator creating stunning artwork from text prompts.", tags: ["Paid", "Popular"], rating: 4.9, featured: true },
-      { name: "DALL-E 3", url: "https://openai.com/dall-e-3", category: "image", icon: "🖼️", desc: "OpenAI's image generation model with photorealistic outputs.", tags: ["Paid"], rating: 4.7 },
-      { name: "Stable Diffusion", url: "https://stability.ai", category: "image", icon: "✨", desc: "Open-source image generation model, run locally or via services.", tags: ["Free", "Open Source"], rating: 4.6 },
-      { name: "GitHub Copilot", url: "https://github.com/features/copilot", category: "coding", icon: "💻", desc: "AI pair programmer that suggests code in real-time.", tags: ["Paid", "Popular"], rating: 4.8, featured: true },
-      { name: "Cursor", url: "https://cursor.sh", category: "coding", icon: "⌨️", desc: "AI-first code editor with deep codebase understanding.", tags: ["Freemium"], rating: 4.7 },
-      { name: "Jasper", url: "https://jasper.ai", category: "writing", icon: "✍️", desc: "AI writing assistant for marketing copy, blogs, and social media.", tags: ["Paid"], rating: 4.5 },
-      { name: "Copy.ai", url: "https://copy.ai", category: "writing", icon: "📝", desc: "Generate marketing copy, emails, and content in seconds.", tags: ["Freemium"], rating: 4.4 },
-      { name: "Notion AI", url: "https://notion.so/product/ai", category: "productivity", icon: "📓", desc: "AI-powered writing and summarization inside Notion.", tags: ["Paid"], rating: 4.6 },
-      { name: "Runway ML", url: "https://runwayml.com", category: "video", icon: "🎬", desc: "AI video editing and generation tools for creators.", tags: ["Paid"], rating: 4.7 },
-      { name: "Pika Labs", url: "https://pika.art", category: "video", icon: "🎥", desc: "Text-to-video AI for creating short clips from prompts.", tags: ["Free"], rating: 4.5 },
-      { name: "ElevenLabs", url: "https://elevenlabs.io", category: "audio", icon: "🎵", desc: "AI voice synthesis with natural-sounding speech.", tags: ["Freemium"], rating: 4.8, featured: true },
-      { name: "Murf AI", url: "https://murf.ai", category: "audio", icon: "🎙️", desc: "AI voiceover generator for videos and presentations.", tags: ["Paid"], rating: 4.4 },
-      { name: "Perplexity AI", url: "https://perplexity.ai", category: "chat", icon: "🔍", desc: "AI-powered search engine with cited sources.", tags: ["Free"], rating: 4.7 },
-      { name: "Anthropic Claude", url: "https://anthropic.com", category: "chat", icon: "🧠", desc: "Safe, helpful AI assistant with 200K context window.", tags: ["Freemium"], rating: 4.8 },
-      { name: "Leonardo AI", url: "https://leonardo.ai", category: "image", icon: "🎭", desc: "AI image generation with fine-tuned models for game assets.", tags: ["Freemium"], rating: 4.6 },
-      { name: "Ideogram", url: "https://ideogram.ai", category: "image", icon: "🌈", desc: "AI image generator excelling at text within images.", tags: ["Free"], rating: 4.5 },
-      { name: "Tabnine", url: "https://tabnine.com", category: "coding", icon: "⚡", desc: "AI code completion supporting all major languages.", tags: ["Freemium"], rating: 4.4 },
-      { name: "Replit AI", url: "https://replit.com/ai", category: "coding", icon: "🌐", desc: "AI coding assistant built into Replit IDE.", tags: ["Free"], rating: 4.3 },
-      { name: "Writer.com", url: "https://writer.com", category: "writing", icon: "📄", desc: "Enterprise AI writing platform for teams.", tags: ["Paid"], rating: 4.5 },
-      { name: "Rytr", url: "https://rytr.me", category: "writing", icon: "✒️", desc: "Affordable AI writing assistant for various content.", tags: ["Freemium"], rating: 4.3 },
-      { name: "Synthesia", url: "https://synthesia.io", category: "video", icon: "👤", desc: "AI video generation with virtual avatars.", tags: ["Paid"], rating: 4.6 },
-      { name: "Descript", url: "https://descript.com", category: "video", icon: "🎞️", desc: "AI-powered video and podcast editing by editing text.", tags: ["Freemium"], rating: 4.7 },
-      { name: "Suno AI", url: "https://suno.ai", category: "audio", icon: "🎶", desc: "AI music generation from text prompts.", tags: ["Free"], rating: 4.6, featured: true },
-      { name: "Whisper", url: "https://openai.com/research/whisper", category: "audio", icon: "👂", desc: "OpenAI's speech-to-text model, highly accurate.", tags: ["Free"], rating: 4.8 },
-      { name: "Gamma", url: "https://gamma.app", category: "productivity", icon: "📊", desc: "AI-powered presentations and documents.", tags: ["Freemium"], rating: 4.5 },
-      { name: "Otter.ai", url: "https://otter.ai", category: "productivity", icon: "📝", desc: "AI meeting transcription and notes.", tags: ["Freemium"], rating: 4.6 },
-      { name: "Grammarly", url: "https://grammarly.com", category: "writing", icon: "✅", desc: "AI writing assistant for grammar and style.", tags: ["Freemium"], rating: 4.7 },
-      { name: "Quillbot", url: "https://quillbot.com", category: "writing", icon: "🔄", desc: "AI paraphrasing and rewriting tool.", tags: ["Freemium"], rating: 4.4 },
-      { name: "Canva AI", url: "https://canva.com/ai-image-generator", category: "image", icon: "🎨", desc: "AI features inside Canva for design and images.", tags: ["Freemium"], rating: 4.6 },
-      { name: "Remove.bg", url: "https://remove.bg", category: "image", icon: "✂️", desc: "AI background removal for images.", tags: ["Free"], rating: 4.5 },
-      { name: "PhotoRoom", url: "https://photoroom.com", category: "image", icon: "📸", desc: "AI photo editing and background removal.", tags: ["Freemium"], rating: 4.4 },
-      { name: "Codeium", url: "https://codeium.com", category: "coding", icon: "🚀", desc: "Free AI code completion for multiple IDEs.", tags: ["Free"], rating: 4.5 },
-      { name: "Amazon CodeWhisperer", url: "https://aws.amazon.com/codewhisperer", category: "coding", icon: "📦", desc: "AWS AI coding assistant for developers.", tags: ["Free"], rating: 4.3 },
-      { name: "Hugging Face", url: "https://huggingface.co", category: "coding", icon: "🤗", desc: "Platform for ML models and AI tools.", tags: ["Free"], rating: 4.8 },
-      { name: "Replicate", url: "https://replicate.com", category: "coding", icon: "🔄", desc: "Run open-source AI models via API.", tags: ["Paid"], rating: 4.5 },
-      { name: "Loom AI", url: "https://loom.com/ai", category: "productivity", icon: "🎥", desc: "AI-powered video messaging for teams.", tags: ["Freemium"], rating: 4.4 },
-      { name: "Fireflies.ai", url: "https://fireflies.ai", category: "productivity", icon: "🔥", desc: "AI meeting notes and transcription.", tags: ["Freemium"], rating: 4.5 },
-      { name: "Motion", url: "https://usemotion.com", category: "productivity", icon: "📅", desc: "AI calendar and task scheduling.", tags: ["Paid"], rating: 4.3 },
-      { name: "Reclaim.ai", url: "https://reclaim.ai", category: "productivity", icon: "⏰", desc: "AI scheduling that protects your time.", tags: ["Freemium"], rating: 4.4 },
-      { name: "SaneBox", url: "https://sanebox.com", category: "productivity", icon: "📧", desc: "AI email filtering and prioritization.", tags: ["Paid"], rating: 4.2 },
-      { name: "Superhuman", url: "https://superhuman.com", category: "productivity", icon: "⚡", desc: "AI-powered email client for speed.", tags: ["Paid"], rating: 4.6 },
-      { name: "Mem", url: "https://mem.ai", category: "productivity", icon: "🧠", desc: "AI-powered note-taking and knowledge base.", tags: ["Paid"], rating: 4.4 },
-      { name: "Reflect", url: "https://reflect.app", category: "productivity", icon: "🪞", desc: "AI note-taking with networked thought.", tags: ["Paid"], rating: 4.3 },
-      { name: "Taskade", url: "https://taskade.com", category: "productivity", icon: "✅", desc: "AI-powered project management and tasks.", tags: ["Freemium"], rating: 4.2 },
-      { name: "Magical", url: "https://getmagical.com", category: "productivity", icon: "✨", desc: "AI text expander and automation.", tags: ["Freemium"], rating: 4.3 },
-      { name: "Texts.com", url: "https://texts.com", category: "productivity", icon: "💬", desc: "All-in-one messaging with AI features.", tags: ["Paid"], rating: 4.1 },
-      { name: "Arc Browser", url: "https://arc.net", category: "productivity", icon: "🌐", desc: "AI-powered browser with smart features.", tags: ["Free"], rating: 4.7 },
-      { name: "Raycast", url: "https://raycast.com", category: "productivity", icon: "🚀", desc: "Mac launcher with AI extensions.", tags: ["Free"], rating: 4.6 },
+      { name: "ChatGPT", category: "chat", icon: "💬", url: "https://chat.openai.com", desc: "Advanced AI chatbot by OpenAI for conversations, writing, coding, and more.", tags: ["Free", "Popular"], rating: 4.9, featured: true },
+      { name: "Claude", category: "chat", icon: "🤖", url: "https://claude.ai", desc: "Anthropic's AI assistant known for thoughtful, nuanced responses and long context.", tags: ["Free", "New"], rating: 4.8 },
+      { name: "Midjourney", category: "image", icon: "🎨", url: "https://www.midjourney.com", desc: "AI image generator creating stunning artwork from text prompts.", tags: ["Paid", "Popular"], rating: 4.9, featured: true },
+      { name: "DALL-E 3", category: "image", icon: "🖼️", url: "https://openai.com/index/dall-e-3", desc: "OpenAI's image generation model with photorealistic outputs.", tags: ["Paid"], rating: 4.7 },
+      { name: "Stable Diffusion", category: "image", icon: "✨", url: "https://stability.ai/stable-diffusion", desc: "Open-source image generation model, run locally or via services.", tags: ["Free", "Open Source"], rating: 4.6 },
+      { name: "GitHub Copilot", category: "coding", icon: "💻", url: "https://github.com/features/copilot", desc: "AI pair programmer that suggests code in real-time.", tags: ["Paid", "Popular"], rating: 4.8, featured: true },
+      { name: "Cursor", category: "coding", icon: "⌨️", url: "https://cursor.com", desc: "AI-first code editor with deep codebase understanding.", tags: ["Freemium"], rating: 4.7 },
+      { name: "Jasper", category: "writing", icon: "✍️", url: "https://jasper.ai", desc: "AI writing assistant for marketing copy, blogs, and social media.", tags: ["Paid"], rating: 4.5 },
+      { name: "Copy.ai", category: "writing", icon: "📝", url: "https://www.copy.ai", desc: "Generate marketing copy, emails, and content in seconds.", tags: ["Freemium"], rating: 4.4 },
+      { name: "Notion AI", category: "productivity", icon: "📓", url: "https://www.notion.so/product/ai", desc: "AI-powered writing and summarization inside Notion.", tags: ["Paid"], rating: 4.6 },
+      { name: "Runway ML", category: "video", icon: "🎬", url: "https://runwayml.com", desc: "AI video editing and generation tools for creators.", tags: ["Paid"], rating: 4.7 },
+      { name: "Pika Labs", category: "video", icon: "🎥", url: "https://pika.art", desc: "Text-to-video AI for creating short clips from prompts.", tags: ["Free"], rating: 4.5 },
+      { name: "ElevenLabs", category: "audio", icon: "🎵", url: "https://elevenlabs.io", desc: "AI voice synthesis with natural-sounding speech.", tags: ["Freemium"], rating: 4.8, featured: true },
+      { name: "Murf AI", category: "audio", icon: "🎙️", url: "https://murf.ai", desc: "AI voiceover generator for videos and presentations.", tags: ["Paid"], rating: 4.4 },
+      { name: "Perplexity AI", category: "chat", icon: "🔍", url: "https://www.perplexity.ai", desc: "AI-powered search engine with cited sources.", tags: ["Free"], rating: 4.7 },
+      { name: "Anthropic Claude", category: "chat", icon: "🧠", url: "https://claude.ai", desc: "Safe, helpful AI assistant with 200K context window.", tags: ["Freemium"], rating: 4.8 },
+      { name: "Leonardo AI", category: "image", icon: "🎭", url: "https://leonardo.ai", desc: "AI image generation with fine-tuned models for game assets.", tags: ["Freemium"], rating: 4.6 },
+      { name: "Ideogram", category: "image", icon: "🌈", url: "https://ideogram.ai", desc: "AI image generator excelling at text within images.", tags: ["Free"], rating: 4.5 },
+      { name: "Tabnine", category: "coding", icon: "⚡", url: "https://www.tabnine.com", desc: "AI code completion supporting all major languages.", tags: ["Freemium"], rating: 4.4 },
+      { name: "Replit AI", category: "coding", icon: "🌐", url: "https://replit.com/ai", desc: "AI coding assistant built into Replit IDE.", tags: ["Free"], rating: 4.3 },
+      { name: "Writer.com", category: "writing", icon: "📄", url: "https://writer.com", desc: "Enterprise AI writing platform for teams.", tags: ["Paid"], rating: 4.5 },
+      { name: "Rytr", category: "writing", icon: "✒️", url: "https://rytr.me", desc: "Affordable AI writing assistant for various content.", tags: ["Freemium"], rating: 4.3 },
+      { name: "Synthesia", category: "video", icon: "👤", url: "https://www.synthesia.io", desc: "AI video generation with virtual avatars.", tags: ["Paid"], rating: 4.6 },
+      { name: "Descript", category: "video", icon: "🎞️", url: "https://www.descript.com", desc: "AI-powered video and podcast editing by editing text.", tags: ["Freemium"], rating: 4.7 },
+      { name: "Suno AI", category: "audio", icon: "🎶", url: "https://suno.ai", desc: "AI music generation from text prompts.", tags: ["Free"], rating: 4.6, featured: true },
+      { name: "Whisper", category: "audio", icon: "👂", url: "https://openai.com/index/whisper", desc: "OpenAI's speech-to-text model, highly accurate.", tags: ["Free"], rating: 4.8 },
+      { name: "Gamma", category: "productivity", icon: "📊", url: "https://gamma.app", desc: "AI-powered presentations and documents.", tags: ["Freemium"], rating: 4.5 },
+      { name: "Otter.ai", category: "productivity", icon: "📝", url: "https://otter.ai", desc: "AI meeting transcription and notes.", tags: ["Freemium"], rating: 4.6 },
+      { name: "Grammarly", category: "writing", icon: "✅", url: "https://www.grammarly.com", desc: "AI writing assistant for grammar and style.", tags: ["Freemium"], rating: 4.7 },
+      { name: "Quillbot", category: "writing", icon: "🔄", url: "https://quillbot.com", desc: "AI paraphrasing and rewriting tool.", tags: ["Freemium"], rating: 4.4 },
+      { name: "Canva AI", category: "image", icon: "🎨", url: "https://www.canva.com/ai", desc: "AI features inside Canva for design and images.", tags: ["Freemium"], rating: 4.6 },
+      { name: "Remove.bg", category: "image", icon: "✂️", url: "https://www.remove.bg", desc: "AI background removal for images.", tags: ["Free"], rating: 4.5 },
+      { name: "PhotoRoom", category: "image", icon: "📸", url: "https://www.photoroom.com", desc: "AI photo editing and background removal.", tags: ["Freemium"], rating: 4.4 },
+      { name: "Codeium", category: "coding", icon: "🚀", url: "https://codeium.com", desc: "Free AI code completion for multiple IDEs.", tags: ["Free"], rating: 4.5 },
+      { name: "Amazon CodeWhisperer", category: "coding", icon: "📦", url: "https://aws.amazon.com/codewhisperer", desc: "AWS AI coding assistant for developers.", tags: ["Free"], rating: 4.3 },
+      { name: "Hugging Face", category: "coding", icon: "🤗", url: "https://huggingface.co", desc: "Platform for ML models and AI tools.", tags: ["Free"], rating: 4.8 },
+      { name: "Replicate", category: "coding", icon: "🔄", url: "https://replicate.com", desc: "Run open-source AI models via API.", tags: ["Paid"], rating: 4.5 },
+      { name: "Loom AI", category: "productivity", icon: "🎥", url: "https://loom.com/lp/loom-for-video", desc: "AI-powered video messaging for teams.", tags: ["Freemium"], rating: 4.4 },
+      { name: "Fireflies.ai", category: "productivity", icon: "🔥", url: "https://fireflies.ai", desc: "AI meeting notes and transcription.", tags: ["Freemium"], rating: 4.5 },
+      { name: "Motion", category: "productivity", icon: "📅", url: "https://www.motion.com", desc: "AI calendar and task scheduling.", tags: ["Paid"], rating: 4.3 },
+      { name: "Reclaim.ai", category: "productivity", icon: "⏰", url: "https://reclaim.ai", desc: "AI scheduling that protects your time.", tags: ["Freemium"], rating: 4.4 },
+      { name: "SaneBox", category: "productivity", icon: "📧", url: "https://www.sanebox.com", desc: "AI email filtering and prioritization.", tags: ["Paid"], rating: 4.2 },
+      { name: "Superhuman", category: "productivity", icon: "⚡", url: "https://superhuman.com", desc: "AI-powered email client for speed.", tags: ["Paid"], rating: 4.6 },
+      { name: "Mem", category: "productivity", icon: "🧠", url: "https://get.mem.ai", desc: "AI-powered note-taking and knowledge base.", tags: ["Paid"], rating: 4.4 },
+      { name: "Reflect", category: "productivity", icon: "🪞", url: "https://reflect.app", desc: "AI note-taking with networked thought.", tags: ["Paid"], rating: 4.3 },
+      { name: "Taskade", category: "productivity", icon: "✅", url: "https://www.taskade.com", desc: "AI-powered project management and tasks.", tags: ["Freemium"], rating: 4.2 },
+      { name: "Magical", category: "productivity", icon: "✨", url: "https://www.magical.so", desc: "AI text expander and automation.", tags: ["Freemium"], rating: 4.3 },
+      { name: "Texts.com", category: "productivity", icon: "💬", url: "https://texts.com", desc: "All-in-one messaging with AI features.", tags: ["Paid"], rating: 4.1 },
+      { name: "Arc Browser", category: "productivity", icon: "🌐", url: "https://arc.net", desc: "AI-powered browser with smart features.", tags: ["Free"], rating: 4.7 },
+      { name: "Raycast", category: "productivity", icon: "🚀", url: "https://www.raycast.com", desc: "Mac launcher with AI extensions.", tags: ["Free"], rating: 4.6 },
     ];
     
-    // Render tools - now with clickable links!
+    // Render tools
     function renderTools(filteredTools) {
       const grid = document.getElementById('tools-grid');
-      grid.innerHTML = filteredTools.map(tool => `
-        <a href="${tool.url}" target="_blank" rel="noopener" class="tool-card" style="position: relative">
-          ${tool.featured ? '<div class="featured-badge">Featured</div>' : ''}
+      grid.innerHTML = filteredTools.map(tool => {
+        const desc = getToolDesc(tool.name, currentLang) || tool.desc;
+        const featuredLabel = currentLang !== 'en' && i18n[currentLang] ? i18n[currentLang]['featured'] : 'Featured';
+        return `
+        <a href="${tool.url}" target="_blank" rel="noopener" style="display:block;text-decoration:none;color:inherit">
+<article class="tool-card" style="position: relative">
+          ${tool.featured ? `<div class="featured-badge">${featuredLabel}</div>` : ''}
           <div class="tool-header">
             <div class="tool-icon">${tool.icon}</div>
             <div>
@@ -762,7 +1039,7 @@
               <div class="tool-category">${tool.category.charAt(0).toUpperCase() + tool.category.slice(1)}</div>
             </div>
           </div>
-          <p class="tool-desc">${tool.desc}</p>
+          <p class="tool-desc">${desc}</p>
           <div class="tool-footer">
             <div class="tool-tags">
               ${tool.tags.map(tag => `<span class="tool-tag">${tag}</span>`).join('')}
@@ -774,250 +1051,32 @@
               ${tool.rating}
             </div>
           </div>
+        </article>
         </a>
-      `).join('');
+        `;
+      }).join('');
     }
     
-    // Translations
-    const translations = {
-      en: {
-        title: "Discover the Best AI Tools",
-        subtitle: "Your curated directory of 100+ AI-powered tools for writing, design, coding, video, and more. Find the perfect AI assistant for your workflow.",
-        badge: "Updated for 2026",
-        searchPlaceholder: "Search AI tools...",
-        allTools: "All Tools",
-        stats: { tools: "AI Tools", categories: "Categories", users: "Monthly Users" },
-        cta: { title: "Submit Your AI Tool", desc: "Have an AI tool you want to feature? Get listed in our directory.", btn: "Submit Tool" },
-        footer: { about: "About", privacy: "Privacy Policy", terms: "Terms", contact: "Contact", copy: "© 2026 AI Tools Box. All rights reserved." },
-        categories: { writing: "✍️ Writing", image: "🎨 Image", coding: "💻 Coding", video: "🎬 Video", audio: "🎵 Audio", chat: "💬 Chat", productivity: "⚡ Productivity" }
-      },
-      zh: {
-        title: "发现最佳 AI 工具",
-        subtitle: "精心策划的 100+ AI 工具目录，涵盖写作、设计、编程、视频等。找到适合你工作流程的完美 AI 助手。",
-        badge: "2026 年更新",
-        searchPlaceholder: "搜索 AI 工具...",
-        allTools: "全部工具",
-        stats: { tools: "AI 工具", categories: "分类", users: "月活用户" },
-        cta: { title: "提交你的 AI 工具", desc: "有想要展示的 AI 工具？加入我们的目录。", btn: "提交工具" },
-        footer: { about: "关于", privacy: "隐私政策", terms: "条款", contact: "联系我们", copy: "© 2026 AI Tools Box. 保留所有权利。" },
-        categories: { writing: "✍️ 写作", image: "🎨 图像", coding: "💻 编程", video: "🎬 视频", audio: "🎵 音频", chat: "💬 聊天", productivity: "⚡ 生产力" }
-      },
-      "zh-tw": {
-        title: "探索最佳 AI 工具",
-        subtitle: "精心策劃的 100+ AI 工具目錄，涵蓋寫作、設計、程式設計、影片等。找到適合你工作流程的完美 AI 助手。",
-        badge: "2026 年更新",
-        searchPlaceholder: "搜尋 AI 工具...",
-        allTools: "全部工具",
-        stats: { tools: "AI 工具", categories: "分類", users: "月活用戶" },
-        cta: { title: "提交你的 AI 工具", desc: "有想要展示的 AI 工具？加入我們的目錄。", btn: "提交工具" },
-        footer: { about: "關於", privacy: "隱私政策", terms: "條款", contact: "聯絡我們", copy: "© 2026 AI Tools Box. 保留所有權利。" },
-        categories: { writing: "✍️ 寫作", image: "🎨 圖像", coding: "💻 程式設計", video: "🎬 影片", audio: "🎵 音訊", chat: "💬 聊天", productivity: "⚡ 生產力" }
-      },
-      ja: {
-        title: "最高のAIツールを発見",
-        subtitle: "ライティング、デザイン、コーディング、ビデオなど、100以上のAIツールを厳選。あなたのワークフローに最適なAIアシスタントを見つけましょう。",
-        badge: "2026年更新",
-        searchPlaceholder: "AIツールを検索...",
-        allTools: "すべてのツール",
-        stats: { tools: "AIツール", categories: "カテゴリ", users: "月間ユーザー" },
-        cta: { title: "AIツールを投稿", desc: "掲載したいAIツールがありますか？ディレクトリに追加しましょう。", btn: "ツールを投稿" },
-        footer: { about: "について", privacy: "プライバシー", terms: "利用規約", contact: "お問い合わせ", copy: "© 2026 AI Tools Box. All rights reserved." },
-        categories: { writing: "✍️ ライティング", image: "🎨 画像", coding: "💻 コーディング", video: "🎬 ビデオ", audio: "🎵 オーディオ", chat: "💬 チャット", productivity: "⚡ 生産性" }
-      },
-      ko: {
-        title: "최고의 AI 도구 발견",
-        subtitle: "글쓰기, 디자인, 코딩, 비디오 등 100개 이상의 AI 도구를 엄선했습니다. 워크플로우에 완벽한 AI 도우미를 찾아보세요.",
-        badge: "2026년 업데이트",
-        searchPlaceholder: "AI 도구 검색...",
-        allTools: "모든 도구",
-        stats: { tools: "AI 도구", categories: "카테고리", users: "월간 사용자" },
-        cta: { title: "AI 도구 제출", desc: "소개하고 싶은 AI 도구가 있나요? 디렉토리에 등록하세요.", btn: "도구 제출" },
-        footer: { about: "소개", privacy: "개인정보", terms: "이용약관", contact: "문의", copy: "© 2026 AI Tools Box. All rights reserved." },
-        categories: { writing: "✍️ 글쓰기", image: "🎨 이미지", coding: "💻 코딩", video: "🎬 비디오", audio: "🎵 오디오", chat: "💬 채팅", productivity: "⚡ 생산성" }
-      },
-      es: {
-        title: "Descubre las Mejores Herramientas de IA",
-        subtitle: "Directorio curado de 100+ herramientas de IA para escritura, diseño, programación, video y más. Encuentra el asistente de IA perfecto.",
-        badge: "Actualizado 2026",
-        searchPlaceholder: "Buscar herramientas de IA...",
-        allTools: "Todas las Herramientas",
-        stats: { tools: "Herramientas IA", categories: "Categorías", users: "Usuarios Mensuales" },
-        cta: { title: "Envía tu Herramienta de IA", desc: "¿Tienes una herramienta de IA para destacar? Aparece en nuestro directorio.", btn: "Enviar Herramienta" },
-        footer: { about: "Acerca de", privacy: "Privacidad", terms: "Términos", contact: "Contacto", copy: "© 2026 AI Tools Box. Todos los derechos reservados." },
-        categories: { writing: "✍️ Escritura", image: "🎨 Imagen", coding: "💻 Programación", video: "🎬 Video", audio: "🎵 Audio", chat: "💬 Chat", productivity: "⚡ Productividad" }
-      },
-      fr: {
-        title: "Découvrez les Meilleurs Outils IA",
-        subtitle: "Répertoire de 100+ outils IA pour l'écriture, le design, le code, la vidéo et plus. Trouvez l'assistant IA parfait pour votre flux de travail.",
-        badge: "Mis à jour 2026",
-        searchPlaceholder: "Rechercher des outils IA...",
-        allTools: "Tous les Outils",
-        stats: { tools: "Outils IA", categories: "Catégories", users: "Utilisateurs Mensuels" },
-        cta: { title: "Soumettre votre Outil IA", desc: "Vous avez un outil IA à présenter ? Faites-le référencer dans notre annuaire.", btn: "Soumettre" },
-        footer: { about: "À propos", privacy: "Confidentialité", terms: "Conditions", contact: "Contact", copy: "© 2026 AI Tools Box. Tous droits réservés." },
-        categories: { writing: "✍️ Écriture", image: "🎨 Image", coding: "💻 Code", video: "🎬 Vidéo", audio: "🎵 Audio", chat: "💬 Chat", productivity: "⚡ Productivité" }
-      },
-      de: {
-        title: "Entdecke die Besten KI-Tools",
-        subtitle: "Kuratiertes Verzeichnis von 100+ KI-Tools für Schreiben, Design, Coding, Video und mehr. Finde den perfekten KI-Assistenten für deinen Workflow.",
-        badge: "Aktualisiert 2026",
-        searchPlaceholder: "KI-Tools suchen...",
-        allTools: "Alle Tools",
-        stats: { tools: "KI-Tools", categories: "Kategorien", users: "Monatliche Nutzer" },
-        cta: { title: "KI-Tool einreichen", desc: "Hast du ein KI-Tool, das du vorstellen möchtest? Lass es in unserem Verzeichnis listen.", btn: "Tool einreichen" },
-        footer: { about: "Über uns", privacy: "Datenschutz", terms: "AGB", contact: "Kontakt", copy: "© 2026 AI Tools Box. Alle Rechte vorbehalten." },
-        categories: { writing: "✍️ Schreiben", image: "🎨 Bild", coding: "💻 Coding", video: "🎬 Video", audio: "🎵 Audio", chat: "💬 Chat", productivity: "⚡ Produktivität" }
-      },
-      pt: {
-        title: "Descubra as Melhores Ferramentas de IA",
-        subtitle: "Diretório curado de 100+ ferramentas de IA para escrita, design, programação, vídeo e mais. Encontre o assistente de IA perfeito.",
-        badge: "Atualizado 2026",
-        searchPlaceholder: "Pesquisar ferramentas de IA...",
-        allTools: "Todas as Ferramentas",
-        stats: { tools: "Ferramentas IA", categories: "Categorias", users: "Usuários Mensais" },
-        cta: { title: "Envie sua Ferramenta de IA", desc: "Tem uma ferramenta de IA para destacar? Apareça em nosso diretório.", btn: "Enviar Ferramenta" },
-        footer: { about: "Sobre", privacy: "Privacidade", terms: "Termos", contact: "Contato", copy: "© 2026 AI Tools Box. Todos os direitos reservados." },
-        categories: { writing: "✍️ Escrita", image: "🎨 Imagem", coding: "💻 Programação", video: "🎬 Vídeo", audio: "🎵 Áudio", chat: "💬 Chat", productivity: "⚡ Produtividade" }
-      },
-      ru: {
-        title: "Откройте Лучшие ИИ-Инструменты",
-        subtitle: "Каталог из 100+ ИИ-инструментов для написания текстов, дизайна, программирования, видео и многого другого.",
-        badge: "Обновлено 2026",
-        searchPlaceholder: "Поиск ИИ-инструментов...",
-        allTools: "Все инструменты",
-        stats: { tools: "ИИ-инструменты", categories: "Категории", users: "Пользователей в месяц" },
-        cta: { title: "Добавить ИИ-инструмент", desc: "Есть ИИ-инструмент для размещения? Добавьте его в наш каталог.", btn: "Добавить" },
-        footer: { about: "О нас", privacy: "Конфиденциальность", terms: "Условия", contact: "Контакты", copy: "© 2026 AI Tools Box. Все права защищены." },
-        categories: { writing: "✍️ Текст", image: "🎨 Изображения", coding: "💻 Код", video: "🎬 Видео", audio: "🎵 Аудио", chat: "💬 Чат", productivity: "⚡ Продуктивность" }
-      },
-      ar: {
-        title: "اكتشف أفضل أدوات الذكاء الاصطناعي",
-        subtitle: "دليل منتقى يضم أكثر من 100 أداة ذكاء اصطناعي للكتابة والتصميم والبرمجة والفيديو والمزيد.",
-        badge: "محدّث 2026",
-        searchPlaceholder: "ابحث عن أدوات الذكاء الاصطناعي...",
-        allTools: "جميع الأدوات",
-        stats: { tools: "أدوات الذكاء الاصطناعي", categories: "الفئات", users: "المستخدمون الشهريون" },
-        cta: { title: "أضف أداتك", desc: "هل لديك أداة ذكاء اصطناعي تريد عرضها؟ أضفها إلى دليلنا.", btn: "إضافة أداة" },
-        footer: { about: "عن الموقع", privacy: "الخصوصية", terms: "الشروط", contact: "اتصل بنا", copy: "© 2026 AI Tools Box. جميع الحقوق محفوظة." },
-        categories: { writing: "✍️ كتابة", image: "🎨 صور", coding: "💻 برمجة", video: "🎬 فيديو", audio: "🎵 صوت", chat: "💬 دردشة", productivity: "⚡ إنتاجية" }
-      },
-      hi: {
-        title: "सर्वश्रेष्ठ AI टूल्स खोजें",
-        subtitle: "लेखन, डिज़ाइन, कोडिंग, वीडियो और अधिक के लिए 100+ AI टूल्स का क्यूरेटेड डायरेक्टरी।",
-        badge: "2026 के लिए अपडेट",
-        searchPlaceholder: "AI टूल्स खोजें...",
-        allTools: "सभी टूल्स",
-        stats: { tools: "AI टूल्स", categories: "श्रेणियाँ", users: "मासिक उपयोगकर्ता" },
-        cta: { title: "अपना AI टूल सबमिट करें", desc: "क्या आपके पास कोई AI टूल है? हमारी डायरेक्टरी में शामिल हों।", btn: "टूल सबमिट करें" },
-        footer: { about: "हमारे बारे में", privacy: "गोपनीयता", terms: "नियम", contact: "संपर्क", copy: "© 2026 AI Tools Box. सर्वाधिकार सुरक्षित।" },
-        categories: { writing: "✍️ लेखन", image: "🎨 छवि", coding: "💻 कोडिंग", video: "🎬 वीडियो", audio: "🎵 ऑडियो", chat: "💬 चैट", productivity: "⚡ उत्पादकता" }
-      },
-      it: {
-        title: "Scopri i Migliori Strumenti AI",
-        subtitle: "Directory curata di 100+ strumenti AI per scrittura, design, coding, video e altro. Trova l'assistente AI perfetto per il tuo flusso di lavoro.",
-        badge: "Aggiornato 2026",
-        searchPlaceholder: "Cerca strumenti AI...",
-        allTools: "Tutti gli Strumenti",
-        stats: { tools: "Strumenti AI", categories: "Categorie", users: "Utenti Mensili" },
-        cta: { title: "Invia il tuo Strumento AI", desc: "Hai uno strumento AI da presentare? Fallo elencare nella nostra directory.", btn: "Invia Strumento" },
-        footer: { about: "Chi siamo", privacy: "Privacy", terms: "Termini", contact: "Contatti", copy: "© 2026 AI Tools Box. Tutti i diritti riservati." },
-        categories: { writing: "✍️ Scrittura", image: "🎨 Immagine", coding: "💻 Coding", video: "🎬 Video", audio: "🎵 Audio", chat: "💬 Chat", productivity: "⚡ Produttività" }
-      },
-      nl: {
-        title: "Ontdek de Beste AI-Tools",
-        subtitle: "Samengestelde directory van 100+ AI-tools voor schrijven, design, coderen, video en meer. Vind de perfecte AI-assistent voor jouw workflow.",
-        badge: "Bijgewerkt 2026",
-        searchPlaceholder: "Zoek AI-tools...",
-        allTools: "Alle Tools",
-        stats: { tools: "AI-Tools", categories: "Categorieën", users: "Maandelijkse Gebruikers" },
-        cta: { title: "Dien je AI-Tool in", desc: "Heb je een AI-tool om te presenteren? Laat het opnemen in onze directory.", btn: "Tool indienen" },
-        footer: { about: "Over ons", privacy: "Privacy", terms: "Voorwaarden", contact: "Contact", copy: "© 2026 AI Tools Box. Alle rechten voorbehouden." },
-        categories: { writing: "✍️ Schrijven", image: "🎨 Afbeelding", coding: "💻 Coderen", video: "🎬 Video", audio: "🎵 Audio", chat: "💬 Chat", productivity: "⚡ Productiviteit" }
-      },
-      tr: {
-        title: "En İyi Yapay Zeka Araçlarını Keşfet",
-        subtitle: "Yazma, tasarım, kodlama, video ve daha fazlası için 100+ yapay zeka aracının özenle seçilmiş dizini.",
-        badge: "2026 Güncellemesi",
-        searchPlaceholder: "Yapay zeka araçlarını ara...",
-        allTools: "Tüm Araçlar",
-        stats: { tools: "YZ Araçları", categories: "Kategoriler", users: "Aylık Kullanıcı" },
-        cta: { title: "YZ Aracınızı Gönderin", desc: "Öne çıkarmak istediğiniz bir YZ aracı var mı? Dizinimizde yer alın.", btn: "Araç Gönder" },
-        footer: { about: "Hakkında", privacy: "Gizlilik", terms: "Şartlar", contact: "İletişim", copy: "© 2026 AI Tools Box. Tüm hakları saklıdır." },
-        categories: { writing: "✍️ Yazma", image: "🎨 Görsel", coding: "💻 Kodlama", video: "🎬 Video", audio: "🎵 Ses", chat: "💬 Sohbet", productivity: "⚡ Verimlilik" }
-      }
-    };
-
-    let currentLang = 'en';
-
-    function applyTranslation(lang) {
-      const t = translations[lang];
-      if (!t) return;
-      
-      // RTL support for Arabic
-      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-      
-      document.querySelector('.hero h1').textContent = t.title;
-      document.querySelector('.hero > p').textContent = t.subtitle;
-      document.querySelector('.hero-badge span:last-child').textContent = t.badge;
-      document.getElementById('search').placeholder = t.searchPlaceholder;
-      document.querySelector('.category-tab[data-category="all"]').textContent = t.allTools;
-      
-      document.querySelectorAll('.stat-label')[0].textContent = t.stats.tools;
-      document.querySelectorAll('.stat-label')[1].textContent = t.stats.categories;
-      document.querySelectorAll('.stat-label')[2].textContent = t.stats.users;
-      
-      document.querySelector('.cta-section h2').textContent = t.cta.title;
-      document.querySelector('.cta-section > p').textContent = t.cta.desc;
-      document.querySelector('.cta-btn span:first-child').textContent = t.cta.btn;
-      
-      document.querySelectorAll('.footer-links a')[0].textContent = t.footer.about;
-      document.querySelectorAll('.footer-links a')[1].textContent = t.footer.privacy;
-      document.querySelectorAll('.footer-links a')[2].textContent = t.footer.terms;
-      document.querySelectorAll('.footer-links a')[3].textContent = t.footer.contact;
-      document.querySelector('.footer-copy').textContent = t.footer.copy;
-      
-      document.querySelector('.category-tab[data-category="writing"]').textContent = t.categories.writing;
-      document.querySelector('.category-tab[data-category="image"]').textContent = t.categories.image;
-      document.querySelector('.category-tab[data-category="coding"]').textContent = t.categories.coding;
-      document.querySelector('.category-tab[data-category="video"]').textContent = t.categories.video;
-      document.querySelector('.category-tab[data-category="audio"]').textContent = t.categories.audio;
-      document.querySelector('.category-tab[data-category="chat"]').textContent = t.categories.chat;
-      document.querySelector('.category-tab[data-category="productivity"]').textContent = t.categories.productivity;
-      
-      document.getElementById('current-lang').textContent = lang.toUpperCase();
-      currentLang = lang;
-      localStorage.setItem('aitoolsbox-lang', lang);
-    }
-
-    // Translate dropdown toggle
-    document.getElementById('translate-btn').addEventListener('click', (e) => {
-      e.stopPropagation();
-      document.getElementById('translate-dropdown').classList.toggle('active');
-    });
-
-    // Language selection
-    document.querySelectorAll('.translate-option').forEach(option => {
-      option.addEventListener('click', () => {
-        const lang = option.dataset.lang;
-        applyTranslation(lang);
-        document.getElementById('translate-dropdown').classList.remove('active');
-      });
-    });
-
-    // Close dropdown when clicking outside
-    document.addEventListener('click', () => {
-      document.getElementById('translate-dropdown').classList.remove('active');
-    });
-
-    // Load saved language
-    const savedLang = localStorage.getItem('aitoolsbox-lang');
-    if (savedLang && translations[savedLang]) {
-      applyTranslation(savedLang);
-    }
-
     // Initial render
     renderTools(tools);
     
+    
+
+    // ── Search Handler (inline oninput) ──
+    function handleSearch(query) {
+      query = query.toLowerCase().trim();
+      const filtered = currentCategory === 'all'
+        ? tools
+        : tools.filter(t => t.category === currentCategory);
+      const searched = query === ''
+        ? filtered
+        : filtered.filter(t => t.name.toLowerCase().includes(query));
+      renderTools(searched);
+    }
+    
+    // Also expose currentCategory to module scope
+    var currentCategory = 'all';
+
     // Category filter
     document.querySelectorAll('.category-tab').forEach(tab => {
       tab.addEventListener('click', () => {
@@ -1025,24 +1084,17 @@
         tab.classList.add('active');
         
         const category = tab.dataset.category;
+        currentCategory = category;
         const filtered = category === 'all' ? tools : tools.filter(t => t.category === category);
         renderTools(filtered);
       });
     });
     
-    // Search
-    document.getElementById('search').addEventListener('input', (e) => {
-      const query = e.target.value.toLowerCase();
-      const filtered = tools.filter(t => 
-        t.name.toLowerCase().includes(query) || 
-        t.desc.toLowerCase().includes(query) ||
-        t.tags.some(tag => tag.toLowerCase().includes(query))
-      );
-      renderTools(filtered);
-    });
+    // Search handled via inline oninput="handleSearch(this.value)"
   </script>
   
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4308687716218559" crossorigin="anonymous"></script>
 </body>
 </html>
+
