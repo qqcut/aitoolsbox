@@ -1,0 +1,1 @@
+{"name":"aitoolsbox","version":"1.0.0","scripts":{"dev":"next dev","build":"next build && node -e \"require('fs').copyFileSync('public/ads.txt','out/ads.txt');require('fs').copyFileSync('public/sw.js','out/sw.js');console.log('done')\"","start":"next start"},"dependencies":{"next":"^14.0.0","react":"^18.2.0","react-dom":"^18.2.0"}}
