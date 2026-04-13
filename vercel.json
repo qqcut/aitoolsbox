@@ -1,1 +1,0 @@
-%7B%22rewrites%22%3A[%20%7B%22source%22%3A%22/ads.txt%22%2C%22destination%22%3A%22/public/ads.txt%22%2C%22permanent%22%3Afalse%2C%22config%22%3A%20%7B%22path_type%22%3A%22replace_prefix%22%7D%7D%5D%7D
