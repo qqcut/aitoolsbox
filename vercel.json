@@ -1,8 +1,1 @@
-{
-  "rewrites": [
-    {
-      "source": "/ads.txt",
-      "destination": "/public/ads.txt"
-    }
-  ]
-}
+"{\"redirects\":[{\"source\":\"/ads.txt\",\"destination\":\"/public/ads.txt\",\"permanent\":false}]}"
